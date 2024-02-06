@@ -6,10 +6,10 @@ export default function CharacterImage({
     character: string;
 }) {
     const imagePathMap: Record<string, string> = {
-        DEFECT: '/defect.jpg',
-        IRONCLAD: '/ironclad.jpg',
-        THE_SILENT: '/silent.jpg',
-        WATCHER: '/watcher.jpg', 
+        DEFECT: '/characters/defect.jpg',
+        IRONCLAD: '/characters/ironclad.jpg',
+        THE_SILENT: '/characters/silent.jpg',
+        WATCHER: '/characters/watcher.jpg', 
     };
 
     const imagePath = imagePathMap[character];

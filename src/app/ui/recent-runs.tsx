@@ -1,13 +1,13 @@
 import { useContext, useState } from "react";
-import { RunContext } from "@/app/ui/run-context";
+import { AppContext } from "@/app/ui/app-context";
 import { kreon, kreon_bold } from "@/app/ui/fonts";
-import CharacterImage from "./character-image";
+import CharacterImage from "@/app/ui/character-image";
 import { playtimeToTimeString, timestampToTimeString, renameCharacterChosen } from "@/app/lib/data";
 import { Run } from "@/app/lib/definitions";
 import Link from "next/link";
 
 export default function RecentRuns() {
-    const { runs, setRuns } = useContext(RunContext);
+    const { runs, setRuns } = useContext(AppContext);
     const [sortConfig, setSortConfig] = useState<{ key: keyof Run; direction: 'asc' | 'desc' } | null>(null);
 
     const handleSort = (key: keyof Run) => {

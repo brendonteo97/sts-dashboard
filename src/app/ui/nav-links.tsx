@@ -4,18 +4,13 @@ import { usePathname } from "next/navigation";
 import clsx from 'clsx';
 import Link from "next/link";
 import { kreon, kreon_bold } from "@/app/ui/fonts";
-
-const links = [
-    { name: 'Dashboard', href: '/', },
-    { name: 'Test2', href: '/run', },
-    { name: 'Test3', href: '/test', },
-]
+import * as Constants from "@/app/lib/constants";
 
 export default function NavLinks() {
     const pathname = usePathname();
     return (
         <>
-            {links.map((link) => {
+            {Constants.links.map((link) => {
                 return (
                     <Link
                         key={link.name}

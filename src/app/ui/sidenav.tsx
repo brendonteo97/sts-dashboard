@@ -6,11 +6,11 @@ import MyDropzone from "@/app/ui/dropzone";
 import Link from "next/link";
 import NavLinks from "@/app/ui/nav-links";
 import { useContext } from "react";
-import { RunContext } from "@/app/ui/run-context";
+import { AppContext } from "@/app/ui/app-context";
 import { kreon } from "@/app/ui/fonts";
 
 export default function SideNav() {
-    const {runs, setRuns} = useContext(RunContext);
+    const {runs, setRuns} = useContext(AppContext);
     
     return (
         <div className="flex h-full flex-col px-3 py-4 md:px-2">
