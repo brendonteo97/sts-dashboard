@@ -1,24 +1,31 @@
 import Image from 'next/image';
 import { AppContext } from '@/app/ui/app-context';
 import { useContext } from 'react';
+import clsx from 'clsx';
 
 export default function Card({
-    character, card
+    characterCard, setHover
 } : {
-    character: string,
-    card: string,
+    characterCard: string,
+    setHover: boolean,
 }) {
+    const [character, card] = characterCard.split("_");
+
     const imagePath = `/cards/${character}/${card}.webp`;
 
-    const { modalOpen, setModalOpen } = useContext(AppContext);
+    const { modalCard: modalOpen, setModalCard: setModalOpen } = useContext(AppContext);
 
     return (
         <Image
             src={imagePath}
-            className="hover:scale-125 transition-transform tranform-gpu"
+            className={clsx(
+                "transition-transform tranform-gpu",
+                {
+                    "hover:scale-125": setHover,
+                }
+            )}
             onClick={() => {
-                setModalOpen(true);
-                console.log("Setting modal open to true");
+                setModalOpen(characterCard);
             }}
             alt={`${card}`}
             width={323}

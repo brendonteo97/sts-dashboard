@@ -7,7 +7,7 @@ import { useContext } from "react";
 import Modal from "@/app/ui/modal";
 
 export default function Page() {
-    const { modalOpen, setModalOpen } = useContext(AppContext);
+    const { modalCard, setModalCard } = useContext(AppContext);
 
     return (
         <main>
@@ -16,12 +16,12 @@ export default function Page() {
                     return (
                         <Card 
                             key={card}
-                            card={card} 
-                            character={"ironclad"}
+                            characterCard={card}
+                            setHover={true}
                         />
                     )
                 })}
-                <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+                <Modal card={modalCard} onClose={() => setModalCard("")} />
             </div>
         </main>
     )

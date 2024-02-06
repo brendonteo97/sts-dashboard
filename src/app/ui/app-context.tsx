@@ -6,8 +6,8 @@ import { Run } from '@/app/lib/definitions';
 export const AppContext = createContext({
     runs: [] as Run[],
     setRuns: {} as React.Dispatch<React.SetStateAction<Run[]>>,
-    modalOpen: false,
-    setModalOpen: {} as React.Dispatch<React.SetStateAction<boolean>>,
+    modalCard: "" as string,
+    setModalCard: {} as React.Dispatch<React.SetStateAction<string>>,
 })
 
 export function AppContextProvider({ 
@@ -17,9 +17,10 @@ export function AppContextProvider({
 }) {
     const [runs, setRuns] = useState([] as Run[]);
     const [modalOpen, setModalOpen] = useState(false);
+    const [modalCard, setModalCard] = useState("");
 
     return (
-        <AppContext.Provider value={{runs, setRuns, modalOpen, setModalOpen}}>
+        <AppContext.Provider value={{runs, setRuns, modalCard, setModalCard}}>
             { children }
         </AppContext.Provider>
     )

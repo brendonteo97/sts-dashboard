@@ -1,16 +1,18 @@
+import { MouseEventHandler } from "react";
+import Card from "@/app/ui/card";
+
 export default function Modal({
-    isOpen, onClose
+    card, onClose
 }: {
-    isOpen: boolean,
-    onClose: {}
+    card: string,
+    onClose: MouseEventHandler<HTMLDivElement>,
 }) {
-    console.log("Is modal open?: " + isOpen.toString());
-    if (!isOpen) return null;
+    if (typeof card !== "string" || card.length === 0) return null;
 
     return (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="bg-white p-6 rounded-lg">
-                <h2>Title</h2>
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50" onClick={onClose}>
+            <div className="bg-black p-6 rounded-lg" onClick={(e) => e.stopPropagation()}>
+                <Card characterCard={card} setHover={false}/>
             </div>
         </div>
     )

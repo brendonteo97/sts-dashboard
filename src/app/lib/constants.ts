@@ -1,11 +1,11 @@
-export const I_Bash = 'Bash';
-export const I_Strike = 'Strike';
-export const I_Armaments = 'Armaments';
-export const I_Anger = 'Anger';
-export const I_BodySlam = 'BodySlam';
-export const I_Defend = 'Defend';
+export const Bash = 'Ironclad_Bash';
+export const I_Strike = 'Ironclad_Strike';
+export const Armaments = 'Ironclad_Armaments';
+export const Anger = 'Ironclad_Anger';
+export const BodySlam = 'Ironclad_BodySlam';
+export const I_Defend = 'Ironclad_Defend';
 
-export const Ironclad_Cards = [I_Bash, I_Strike, I_Armaments, I_Anger, I_BodySlam, I_Defend];
+export const Ironclad_Cards = [Bash, I_Strike, Armaments, Anger, BodySlam, I_Defend];
 
 export const links = [
     { name: 'Dashboard', href: '/', },
