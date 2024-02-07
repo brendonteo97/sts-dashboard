@@ -11,7 +11,7 @@ export default function Modal({
 
     return (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50" onClick={onClose}>
-            <div className="bg-black p-6 rounded-lg" onClick={(e) => e.stopPropagation()}>
+            <div className="bg-transparent" onClick={(e) => e.stopPropagation()}>
                 <Card characterCard={card} setHover={false}/>
             </div>
         </div>

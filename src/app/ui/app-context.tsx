@@ -16,7 +16,6 @@ export function AppContextProvider({
     children: React.ReactNode
 }) {
     const [runs, setRuns] = useState([] as Run[]);
-    const [modalOpen, setModalOpen] = useState(false);
     const [modalCard, setModalCard] = useState("");
 
     return (

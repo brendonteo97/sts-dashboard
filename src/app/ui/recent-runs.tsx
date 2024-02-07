@@ -28,64 +28,59 @@ export default function RecentRuns() {
     }
 
     return (
-        <>
-            <div className="flex w-full flex-col md:col-span-4">
-                <h2 className={`${kreon_bold.className} text-xl`}>
-                    Recent Runs
-                </h2>
-                <div className="flex grow flex-col justify-between rounded-xl bg-gray-50 p-4 overflow-auto max-h-screen">
-                    <table className={`hidden min-w-full rounded-md text-gray-900 md:table ${kreon.className}`}>
-                        <thead className="rounded-md bg-gray-50 text-left text-xl font-normal"> 
-                            <tr>
-                                <th scope="col" className="px-4 py-5 font-medium sm:pl-6" onClick={() => handleSort('character_chosen')}>
-                                    Character
-                                </th>
-                                <th scope="col" className="px-3 py-5 font-medium" onClick={() => handleSort('timestamp')}>
-                                    Timestamp
-                                </th>
-                                <th scope="col" className="px-3 py-5 font-medium" onClick={() => handleSort('playtime')}>
-                                    Time Taken
-                                </th>
-                                <th scope="col" className="px-3 py-5 font-medium" onClick={() => handleSort('ascension_level')}>
-                                    Ascension
-                                </th>
-                                <th scope="col" className="px-3 py-5 font-medium" onClick={() => handleSort('victory')}>
-                                    Victory?
-                                </th>
-                            </tr>
-                        </thead>
+        <div className="flex w-1/3 flex-col md:col-span-4 max-h-fit">
+            <div className="flex grow flex-col justify-between rounded-xl bg-gray-50 p-4 overflow-auto">
+                <table className={`hidden min-w-full rounded-md text-gray-900 md:table ${kreon.className}`}>
+                    <thead className="rounded-md bg-gray-50 text-left text-xl font-normal"> 
+                        <tr>
+                            <th scope="col" className="px-4 py-5 font-medium sm:pl-6" onClick={() => handleSort('character_chosen')}>
+                                Character
+                            </th>
+                            <th scope="col" className="px-3 py-5 font-medium" onClick={() => handleSort('timestamp')}>
+                                Timestamp
+                            </th>
+                            <th scope="col" className="px-3 py-5 font-medium" onClick={() => handleSort('playtime')}>
+                                Time Taken
+                            </th>
+                            <th scope="col" className="px-3 py-5 font-medium" onClick={() => handleSort('ascension_level')}>
+                                Ascension
+                            </th>
+                            <th scope="col" className="px-3 py-5 font-medium" onClick={() => handleSort('victory')}>
+                                Victory?
+                            </th>
+                        </tr>
+                    </thead>
 
-                        <tbody className="divide-y divide-gray-200 text-gray-900">
-                            {runs.map((run) => (
-                                    <tr key={run.play_id} className="group">
-                                        <td className="whitespace-nowrap bg-white py-5 pl-4 pr-3 text-lg text-black group-first-of-type:rounded-md group-last-of-type:rounded-md sm:pl-6">
-                                            <Link
-                                                href={`/run/${run.play_id}`}
-                                            >
-                                                <div className="flex items-center gap-3">
-                                                    <CharacterImage character={run.character_chosen} />
-                                                    <p>{renameCharacterChosen(run.character_chosen)}</p>
-                                                </div>
-                                            </Link>
-                                        </td>
-                                        <td className="whitespace-nowrap bg-white px-4 py-5 text-lg">
-                                            {timestampToTimeString(run.timestamp)}
-                                        </td>
-                                        <td className="whitespace-nowrap bg-white px-4 py-5 text-lg">
-                                            {playtimeToTimeString(run.playtime)}
-                                        </td>
-                                        <td className="whitespace-nowrap bg-white px-4 py-5 text-lg">
-                                            {run.ascension_level}
-                                        </td>
-                                        <td className="whitespace-nowrap bg-white px-4 py-5 text-lg group-first-of-type:rounded-md group-last-of-type:rounded-md">
-                                            {`${run.victory}`}
-                                        </td>
-                                    </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </div>
+                    <tbody className="divide-y divide-gray-200 text-gray-900">
+                        {runs.map((run) => (
+                                <tr key={run.play_id} className="group">
+                                    <td className="whitespace-nowrap bg-white py-5 pl-4 pr-3 text-lg text-black group-first-of-type:rounded-md group-last-of-type:rounded-md sm:pl-6">
+                                        <Link
+                                            href={`/run/${run.play_id}`}
+                                        >
+                                            <div className="flex items-center gap-3">
+                                                <CharacterImage character={run.character_chosen} />
+                                                <p>{renameCharacterChosen(run.character_chosen)}</p>
+                                            </div>
+                                        </Link>
+                                    </td>
+                                    <td className="whitespace-nowrap bg-white px-4 py-5 text-lg">
+                                        {timestampToTimeString(run.timestamp)}
+                                    </td>
+                                    <td className="whitespace-nowrap bg-white px-4 py-5 text-lg">
+                                        {playtimeToTimeString(run.playtime)}
+                                    </td>
+                                    <td className="whitespace-nowrap bg-white px-4 py-5 text-lg">
+                                        {run.ascension_level}
+                                    </td>
+                                    <td className="whitespace-nowrap bg-white px-4 py-5 text-lg group-first-of-type:rounded-md group-last-of-type:rounded-md">
+                                        {`${run.victory}`}
+                                    </td>
+                                </tr>
+                        ))}
+                    </tbody>
+                </table>
             </div>
-        </>
+        </div>
     )
 }

@@ -5,6 +5,7 @@ import { AppContext } from '@/app/ui/app-context';
 import RecentRuns from '@/app/ui/recent-runs';
 import placeholder from '@/app/lib/placeholderRun.json';
 import { Run } from '@/app/lib/definitions';
+import WinrateGraph from './ui/graphs/win-rate';
 
 export default function Page() {
     const { runs, setRuns } = useContext(AppContext);
@@ -14,12 +15,13 @@ export default function Page() {
     }
 
     return (
-        <main>
-            <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8">
-                {runs.length !== 0 ? (
-                    <RecentRuns />
-                ) : (<></>)}
-            </div>
-        </main>
+        <div className="flex flex-auto w-screen h-auto max-h-full gap-6">
+            {runs.length !== 0 ? (
+                <RecentRuns />
+            ) : (<></>)}
+            {runs.length !== 0 ? (
+                <WinrateGraph />
+            ) : (<></>)}
+        </div>
     )
 }
