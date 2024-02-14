@@ -2,26 +2,20 @@
 
 import { useContext } from 'react';
 import { AppContext } from '@/app/ui/app-context';
-import RecentRuns from '@/app/ui/recent-runs';
-import placeholder from '@/app/lib/placeholderRun.json';
-import { Run } from '@/app/lib/definitions';
-import WinrateGraph from './ui/graphs/win-rate';
+import RecentRuns from '@/app/ui/panels/recent-runs';
+import WinrateGraph from '@/app/ui/panels/win-rate';
+import RunFilters from '@/app/ui/panels/run-filters'
 
 export default function Page() {
-    const { runs, setRuns } = useContext(AppContext);
-
-    if (runs.length === 0) {
-        setRuns([placeholder] as Run[]);
-    }
-
     return (
-        <div className="flex flex-auto w-screen h-auto max-h-full gap-6">
-            {runs.length !== 0 ? (
+        <div className="flex flex-row max-h-full w-screen gap-6">
+            <div>
                 <RecentRuns />
-            ) : (<></>)}
-            {runs.length !== 0 ? (
+            </div>
+            <div className="flex flex-col space-y-6 max-h-full w-auto">
+                <RunFilters />
                 <WinrateGraph />
-            ) : (<></>)}
+            </div>
         </div>
     )
 }

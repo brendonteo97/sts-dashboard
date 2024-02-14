@@ -1,6 +1,6 @@
-import { useContext } from "react";
+import { MouseEventHandler, useContext, useRef } from "react";
 import { AppContext } from "@/app/ui/app-context";
-import { Bar } from "react-chartjs-2";
+import { Bar, getElementAtEvent } from "react-chartjs-2";
 import { ChartOptions, ChartData } from "chart.js/auto";
 import { Chart, registerables } from "chart.js";
 import * as Constants from "@/app/lib/constants";
@@ -15,14 +15,15 @@ interface CharacterStats {
 Chart.register(...registerables);
 
 export default function WinrateGraph() {
-    const { runs, setRuns } = useContext(AppContext);
+    const { runsContext, setRunsContext } = useContext(AppContext);
+    const chartRef = useRef();
 
     let characterStats: CharacterStats = {};
     Object.keys(Constants.Renamed_Chars).forEach(key => {
         characterStats[key] = characterStats[key] || { wins: 0, total: 0}
     })
 
-    runs.forEach(run => {
+    runsContext.forEach(run => {
         characterStats[run.character_chosen].total++
         if (run.victory) {
             characterStats[run.character_chosen].wins++
@@ -40,6 +41,7 @@ export default function WinrateGraph() {
         datasets: [{
             label: "Win Rate by Character",
             data: winrates,
+            backgroundColor: Constants.BarChartColors,
         }]
     };
 
@@ -56,11 +58,18 @@ export default function WinrateGraph() {
         }
     };
 
+    const chartClick = (event: React.MouseEvent<HTMLCanvasElement>) => {
+        console.log(typeof(event))
+        if (chartRef.current) {
+            const chart = Chart.getChart(chartRef.current);
+            const element = getElementAtEvent(chartRef.current, event);
+            console.log(element);
+        }
+    }
+
     return (
-        <div className="flex w-1/3 h-1/2 flex-col md:col-span-4">
-            <div className="flex grow flex-col justify-between rounded-xl bg-gray-50 p-4">
-                <Bar data={chartData} options={chartOptions} />
-            </div>
+        <div className="justify-between rounded-xl bg-gray-50 p-4 aspect-[2/1] w-[48rem]">
+            <Bar ref={chartRef} data={chartData} options={chartOptions} onClick={chartClick} />
         </div>
     )
 }
