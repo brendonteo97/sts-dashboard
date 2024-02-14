@@ -1,4 +1,4 @@
-import { MouseEventHandler, useContext, useRef } from "react";
+import { useContext, useRef } from "react";
 import { AppContext } from "@/app/ui/app-context";
 import { Bar, getElementAtEvent } from "react-chartjs-2";
 import { ChartOptions, ChartData } from "chart.js/auto";

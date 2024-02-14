@@ -1,10 +1,9 @@
 'use client';
 
-import { useContext } from 'react';
-import { AppContext } from '@/app/ui/app-context';
 import RecentRuns from '@/app/ui/panels/recent-runs';
 import WinrateGraph from '@/app/ui/panels/win-rate';
 import RunFilters from '@/app/ui/panels/run-filters'
+import FloorChart from '@/app/ui/panels/floor-chart';
 
 export default function Page() {
     return (
@@ -12,9 +11,12 @@ export default function Page() {
             <div>
                 <RecentRuns />
             </div>
-            <div className="flex flex-col space-y-6 max-h-full w-auto">
+            <div className="flex flex-col space-y-6 w-auto">
                 <RunFilters />
+            </div>
+            <div className="flex flex-col space-y-6">  
                 <WinrateGraph />
+                <FloorChart />
             </div>
         </div>
     )
