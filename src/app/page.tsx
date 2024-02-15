@@ -7,7 +7,7 @@ import FloorChart from '@/app/ui/panels/floor-chart';
 
 export default function Page() {
     return (
-        <div className="flex flex-row max-h-full w-screen gap-6">
+        <div className="flex flex-row max-h-full gap-6">
             <div>
                 <RecentRuns />
             </div>

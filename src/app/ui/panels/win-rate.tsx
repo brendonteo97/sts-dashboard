@@ -58,18 +58,18 @@ export default function WinrateGraph() {
         }
     };
 
-    const chartClick = (event: React.MouseEvent<HTMLCanvasElement>) => {
-        console.log(typeof(event))
-        if (chartRef.current) {
-            const chart = Chart.getChart(chartRef.current);
-            const element = getElementAtEvent(chartRef.current, event);
-            console.log(element);
-        }
-    }
+    // const chartClick = (event: React.MouseEvent<HTMLCanvasElement>) => {
+    //     console.log(typeof(event))
+    //     if (chartRef.current) {
+    //         const chart = Chart.getChart(chartRef.current);
+    //         const element = getElementAtEvent(chartRef.current, event);
+    //         console.log(element);
+    //     }
+    // }
 
     return (
         <div className="justify-between rounded-xl bg-gray-50 p-4 aspect-[2/1] w-[48rem]">
-            <Bar ref={chartRef} data={chartData} options={chartOptions} onClick={chartClick} />
+            <Bar ref={chartRef} data={chartData} options={chartOptions} />
         </div>
     )
 }

@@ -5,6 +5,24 @@ export const Anger = 'Ironclad_Anger';
 export const BodySlam = 'Ironclad_BodySlam';
 export const I_Defend = 'Ironclad_Defend';
 
+export const Ironclad_Cards = [Bash, I_Strike, Armaments, Anger, BodySlam, I_Defend];
+
+export const Tag_Attack = "attack";
+export const Tag_Block = "block";
+export const Tag_Skill = "skill";
+export const Tag_Power = "power";
+export const Tag_Damage = "damage";
+
+export const Default_Tag_List = [
+    Tag_Attack, Tag_Skill, Tag_Power, Tag_Damage, Tag_Block
+];
+
+export const Default_Tags_Map: {[key: string]: string[]} = {
+    [Bash]:  [Tag_Attack, Tag_Damage],
+    [I_Strike]: [Tag_Attack, Tag_Damage],
+    [Armaments]: [Tag_Skill, Tag_Block],
+}
+
 export const Ironclad_Data = 'IRONCLAD';
 export const Ironclad_Text = 'Ironclad';
 export const Silent_Data = 'THE_SILENT';
@@ -13,8 +31,6 @@ export const Defect_Data = 'DEFECT';
 export const Defect_Text = 'Defect';
 export const Watcher_Data = 'WATCHER';
 export const Watcher_Text = 'Watcher';
-
-export const Ironclad_Cards = [Bash, I_Strike, Armaments, Anger, BodySlam, I_Defend];
 
 export const Renamed_Chars: {[key: string]: string} = {
     [Ironclad_Data]: Ironclad_Text, 
