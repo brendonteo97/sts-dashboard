@@ -97,3 +97,22 @@ export type Event = {
     cards_removed: string[] | undefined,
     cards_upgraded: string[] | undefined,
 }
+
+export type CardTags = {
+    [character: string]: {
+        [type: string]: {
+            [card: string]: string[]
+        }
+    }
+}
+
+export type CardDetails = {
+    [character: string]: {
+        [type: string]: {
+            [card: string]: {
+                energy: number,
+                description: string,
+            }
+        }
+    }
+}

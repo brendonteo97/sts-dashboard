@@ -1,0 +1,310 @@
+{
+    "ironclad": {
+      "attacks": {
+        "anger": {
+			"energy": 0,
+			"description":"Deal 6 damage.\nAdd a copy of this card into your discard pile."
+		},
+        "bash": {
+			"energy": 2,
+			"description":"Deal 8 damage.\nApply 2 Vulnerable."
+		},
+        "blood_for_blood": {
+			"energy": 0,
+			"description":""
+		},
+        "bludgeon": {
+			"energy": 0,
+			"description":""
+		},
+        "body_slam": {
+			"energy": 0,
+			"description":""
+		},
+        "carnage": {
+			"energy": 0,
+			"description":""
+		},
+        "clash": {
+			"energy": 0,
+			"description":""
+		},
+        "cleave": {
+			"energy": 0,
+			"description":""
+		},
+        "clothesline": {
+			"energy": 0,
+			"description":""
+		},
+        "drop_kick": {
+			"energy": 0,
+			"description":""
+		},
+        "feed": {
+			"energy": 0,
+			"description":""
+		},
+        "fiend_fire": {
+			"energy": 0,
+			"description":""
+		},
+        "headbutt": {
+			"energy": 0,
+			"description":""
+		},
+        "heavy_blade": {
+			"energy": 0,
+			"description":""
+		},
+        "hemokinesis": {
+			"energy": 0,
+			"description":""
+		},
+        "immolate": {
+			"energy": 0,
+			"description":""
+		},
+        "iron_wave": {
+			"energy": 0,
+			"description":""
+		},
+        "perfected_strike": {
+			"energy": 0,
+			"description":""
+		},
+        "pommel_strike": {
+			"energy": 0,
+			"description":""
+		},
+        "pummel": {
+			"energy": 0,
+			"description":""
+		},
+        "rampage": {
+			"energy": 0,
+			"description":""
+		},
+        "reaper": {
+			"energy": 0,
+			"description":""
+		},
+        "reckless_charge": {
+			"energy": 0,
+			"description":""
+		},
+        "searing_blow": {
+			"energy": 0,
+			"description":""
+		},
+        "sever_soul": {
+			"energy": 0,
+			"description":""
+		},
+        "strike": {
+			"energy": 0,
+			"description":""
+		},
+        "sword_boomerang": {
+			"energy": 0,
+			"description":""
+		},
+        "thunder_clap": {
+			"energy": 0,
+			"description":""
+		},
+        "twin_strike": {
+			"energy": 0,
+			"description":""
+		},
+        "uppercut": {
+			"energy": 0,
+			"description":""
+		},
+        "whirlwind": {
+			"energy": 0,
+			"description":""
+		},
+        "wild_strike": {
+			"energy": 0,
+			"description":""
+		}
+      },
+      "skills": {
+        "armaments": {
+			"energy": 0,
+			"description":""
+		},
+        "battle_trance": {
+			"energy": 0,
+			"description":""
+		},
+        "bloodletting": {
+			"energy": 0,
+			"description":""
+		},
+        "burning_pact": {
+			"energy": 0,
+			"description":""
+		},
+        "defend": {
+			"energy": 0,
+			"description":""
+		},
+        "disarm": {
+			"energy": 0,
+			"description":""
+		},
+        "double_tap": {
+			"energy": 0,
+			"description":""
+		},
+        "dual_wield": {
+			"energy": 0,
+			"description":""
+		},
+        "entrench": {
+			"energy": 0,
+			"description":""
+		},
+        "exhume": {
+			"energy": 0,
+			"description":""
+		},
+        "flame_barrier": {
+			"energy": 0,
+			"description":""
+		},
+        "flex": {
+			"energy": 0,
+			"description":""
+		},
+        "ghostly_armor": {
+			"energy": 0,
+			"description":""
+		},
+        "havoc": {
+			"energy": 0,
+			"description":""
+		},
+        "impervious": {
+			"energy": 0,
+			"description":""
+		},
+        "infernal_blade": {
+			"energy": 0,
+			"description":""
+		},
+        "intimidate": {
+			"energy": 0,
+			"description":""
+		},
+        "limit_break": {
+			"energy": 0,
+			"description":""
+		},
+        "offering": {
+			"energy": 0,
+			"description":""
+		},
+        "power_through": {
+			"energy": 0,
+			"description":""
+		},
+        "rage": {
+			"energy": 0,
+			"description":""
+		},
+        "second_wind": {
+			"energy": 0,
+			"description":""
+		},
+        "seeing_red": {
+			"energy": 0,
+			"description":""
+		},
+        "sentinel": {
+			"energy": 0,
+			"description":""
+		},
+        "shockwave": {
+			"energy": 0,
+			"description":""
+		},
+        "shrug_it_off": {
+			"energy": 0,
+			"description":""
+		},
+        "spot_weakness": {
+			"energy": 0,
+			"description":""
+		},
+        "true_grit": {
+			"energy": 0,
+			"description":""
+		},
+        "warcry": {
+			"energy": 0,
+			"description":""
+		}
+      },
+      "powers": {
+        "barricade": {
+			"energy": 0,
+			"description":""
+		},
+        "berserk": {
+			"energy": 0,
+			"description":""
+		},
+        "brutality": {
+			"energy": 0,
+			"description":""
+		},
+        "combust": {
+			"energy": 0,
+			"description":""
+		},
+        "corruption": {
+			"energy": 0,
+			"description":""
+		},
+        "dark_embrace": {
+			"energy": 0,
+			"description":""
+		},
+        "demon_form": {
+			"energy": 0,
+			"description":""
+		},
+        "evolve": {
+			"energy": 0,
+			"description":""
+		},
+        "feel_no_pain": {
+			"energy": 0,
+			"description":""
+		},
+        "fire_breathing": {
+			"energy": 0,
+			"description":""
+		},
+        "inflame": {
+			"energy": 0,
+			"description":""
+		},
+        "juggernaut": {
+			"energy": 0,
+			"description":""
+		},
+        "metallicize": {
+			"energy": 0,
+			"description":""
+		},
+        "rupture": {
+			"energy": 0,
+			"description":""
+		}
+      }
+    }
+  }
