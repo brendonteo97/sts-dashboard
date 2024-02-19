@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import SideNav from "@/app/ui/sidenav";
 import { AppContextProvider } from "@/app/ui/app-context";
-
-const inter = Inter({ subsets: ["latin"] });
+import { kreon } from "@/app/ui/fonts";
 
 export const metadata: Metadata = {
   title: {
@@ -21,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={kreon.className}>
         <AppContextProvider>
           <div className="flex h-screen flex-col md:flex-row md:overflow-y-hidden">
             <div className="w-full flex-none md:w-64">
