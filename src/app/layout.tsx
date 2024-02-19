@@ -27,9 +27,7 @@ export default function RootLayout({
             <div className="w-full flex-none md:w-64">
               <SideNav />
             </div>
-            <div className="flex-none p-6 grid-rows-2 md:overflow-y-auto md:p-12">
-              {children}
-            </div>
+            {children}
           </div>
         </AppContextProvider>
       </body>

@@ -116,3 +116,21 @@ export type CardDetails = {
         }
     }
 }
+
+export type CardModal = {
+    character: string,
+    type: string,
+    card: string,
+    rarity: string,
+    upgraded: boolean
+}
+
+export type CardOptions = {
+    upgraded: boolean,
+}
+
+export type CardList = {
+    [character: string]: {
+        [type: string]: string[]
+    }
+}
