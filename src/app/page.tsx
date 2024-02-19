@@ -1,27 +1,25 @@
 'use client';
 
-import { useContext } from 'react';
-import { AppContext } from '@/app/ui/app-context';
-import RecentRuns from '@/app/ui/recent-runs';
-import placeholder from '@/app/lib/placeholderRun.json';
-import { Run } from '@/app/lib/definitions';
-import WinrateGraph from './ui/graphs/win-rate';
+import RecentRuns from '@/app/ui/panels/recent-runs';
+import WinrateGraph from '@/app/ui/panels/win-rate';
+import RunFilters from '@/app/ui/panels/run-filters'
+import FloorChart from '@/app/ui/panels/floor-chart';
 
 export default function Page() {
-    const { runs, setRuns } = useContext(AppContext);
-
-    if (runs.length === 0) {
-        setRuns([placeholder] as Run[]);
-    }
-
     return (
-        <div className="flex flex-auto w-screen h-auto max-h-full gap-6">
-            {runs.length !== 0 ? (
-                <RecentRuns />
-            ) : (<></>)}
-            {runs.length !== 0 ? (
-                <WinrateGraph />
-            ) : (<></>)}
+        <div className="flex-none p-6 grid-rows-2 md:overflow-y-auto md:p-12">
+            <div className="flex flex-row max-h-full gap-6">
+                <div>
+                    <RecentRuns />
+                </div>
+                <div className="flex flex-col space-y-6 w-auto">
+                    <RunFilters />
+                </div>
+                <div className="flex flex-col space-y-6">  
+                    <WinrateGraph />
+                    <FloorChart />
+                </div>
+            </div>
         </div>
     )
 }

@@ -10,7 +10,8 @@ import { AppContext } from "@/app/ui/app-context";
 import { kreon } from "@/app/ui/fonts";
 
 export default function SideNav() {
-    const {runs, setRuns} = useContext(AppContext);
+    const {importedRuns, setImportedRuns} = useContext(AppContext);
+    const {runsContext, setRunsContext} = useContext(AppContext);
     
     return (
         <div className="flex h-full flex-col px-3 py-4 md:px-2">
@@ -26,7 +27,8 @@ export default function SideNav() {
                 <MyDropzone onDrop={
                     async (acceptedFiles: FileWithPath[]) => {
                         const runs = await handleDrop(acceptedFiles);
-                        setRuns(runs);
+                        setImportedRuns(runs);
+                        setRunsContext(runs);
                     }
                 }/>
             </div>
