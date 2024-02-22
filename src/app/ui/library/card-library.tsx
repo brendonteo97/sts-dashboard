@@ -77,13 +77,6 @@ export default function CardLibrary() {
                 {generateCards()}
                 <CardModal 
                     card={modalCard}
-                    onClose={() => setModalCard({
-                        character: "",
-                        type: "",
-                        card: "",
-                        rarity: "",
-                        upgraded: false,
-                    })} 
                 />
             </div>
         </div>

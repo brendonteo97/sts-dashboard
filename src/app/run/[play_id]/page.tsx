@@ -8,6 +8,7 @@ import { timestampToTimeString } from '@/app/lib/data';
 import { useParams } from 'next/navigation';
 import { Run } from '@/app/lib/definitions';
 import RunChart from '@/app/ui/run/run-chart';
+import CardComposition from '@/app/ui/run/card-composition';
 
 export default function Page() {
     const {runsContext} = useContext(AppContext);
@@ -17,8 +18,13 @@ export default function Page() {
 
     return (
         <div className="flex flex-col w-[132rem]">
-            <p className={`'text-[#efc851] text-xl ${kreon.className}`}>{Constants.Renamed_Chars[run.character_chosen]}, {timestampToTimeString(run.timestamp)}</p>
-            <RunChart play_id={params.play_id} />
+            <div>
+                <p className={`'text-[#efc851] text-xl ${kreon.className}`}>{Constants.Renamed_Chars[run.character_chosen]}, {timestampToTimeString(run.timestamp)}</p>
+                <RunChart play_id={params.play_id} />
+            </div>
+            <div>
+                <CardComposition />
+            </div>
         </div>
     )
 }

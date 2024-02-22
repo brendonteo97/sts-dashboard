@@ -1,14 +1,10 @@
 import { ChangeEvent, useContext, useEffect, useState } from "react";
 import { kreon_light } from "@/app/ui/fonts";
-import { AppContext } from "../app-context";
 
 export default function TagDropdown({
-    hidden, character, type, card, onAddTag
+    hidden, onAddTag
 }: {
     hidden: boolean,
-    character: string,
-    type: string,
-    card: string,
     onAddTag: (newTag: string) => void,
 }) {
     const [ tagText, setTagText ] = useState('');
@@ -18,7 +14,9 @@ export default function TagDropdown({
     }
 
     const addTag = () => {
-        onAddTag(tagText);
+        if (tagText.length !== 0) {
+            onAddTag(tagText);
+        }
     }
 
     return (
@@ -35,7 +33,7 @@ export default function TagDropdown({
                     </label>
                 </div>
                 <div>
-                    <button className={`rounded-r-xl bg-[#222a2b] ${kreon_light.className}`} onClick={addTag}>
+                    <button className={`rounded-r-xl bg-[#222a2b] px-2 ${kreon_light.className}`} onClick={addTag}>
                         Add
                     </button>
                 </div>

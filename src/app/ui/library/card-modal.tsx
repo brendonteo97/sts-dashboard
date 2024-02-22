@@ -4,15 +4,16 @@ import { kreon_light } from "@/app/ui/fonts";
 import { CardModal, CardTags } from "@/app/lib/definitions";
 import { AppContext } from "../app-context";
 import TagDropdown from "./tag-dropdown";
+import clsx from "clsx";
+import { colors } from "@/app/lib/constants";
 
 export default function CardModal({
-    card, onClose
+    card
 }: {
-    card: CardModal,
-    onClose: MouseEventHandler<HTMLDivElement>,
+    card: CardModal
 }) {
-    const { userTags } = useContext(AppContext);
-    const [ showTagDropdown, setShowTagDropdown ] = useState(true);
+    const { userTags, setModalCard } = useContext(AppContext);
+    const [ hideTagDropdown, setHideTagDropdown ] = useState(true);
     const [ tags, setTags ] = useState([] as string[]);
 
     useEffect(() => {
@@ -23,13 +24,26 @@ export default function CardModal({
 
     const handleAddTag = (newTag: string) => {
         setTags([...tags, newTag]);
+        userTags[card.character][card.type][card.card].push(newTag);
+        setHideTagDropdown(true);
+    }
+
+    const closeModal: MouseEventHandler<HTMLDivElement> = () => {
+        setModalCard({
+            character: "",
+            type: "",
+            card: "",
+            rarity: "",
+            upgraded: false,
+        });
+        setHideTagDropdown(true);
     }
 
     if (card.character.length === 0 || card.type.length === 0 || card.card.length === 0) return null;
 
     return (
-        <div className="flex fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-30" onClick={onClose}>
-            <div className="flex flex-row h-fit items-center" onClick={(e) => e.stopPropagation()}>
+        <div className="flex fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-30" onClick={closeModal}>
+            <div className="flex flex-row h-fit items-center relative" onClick={(e) => e.stopPropagation()}>
                 <div className="bg-transparent z-40">
                     <Card 
                         character={card.character}
@@ -40,24 +54,27 @@ export default function CardModal({
                         setHover={false}
                     />
                 </div>
-                <div className="grid grid-rows-6 grid-flow-col bg-[#546b70] p-4 pl-[4.0rem] justify-start h-[350px] -ml-10 z-35 rounded-xl gap-[1rem]">
+                <div className={`grid grid-rows-6 grid-flow-col bg-[${colors.sts_blue}] p-4 pl-[4.0rem] justify-start h-[350px] -ml-10 z-30 rounded-xl gap-[1rem]`}>
                     {tags.map(tag => (
-                        <div key={tag} className={`rounded-xl ${kreon_light.className} text-xl text-center bg-[#222a2b] p-1`}>
+                        <div key={tag} className={`rounded-xl ${kreon_light.className} text-xl text-center bg-[${colors.sts_blue_dark}] p-1`}>
                             {tag}
                         </div>
                     ))}
-                    <div className="grid grid-rows-subgrid row-start-6 relative">
-                        <button className={`rounded-xl bg-[#222a2b] ${kreon_light.className}`} onClick={() => setShowTagDropdown(!showTagDropdown)}>
-                            Add tag
-                        </button>
-                        <TagDropdown 
-                            hidden={showTagDropdown} 
-                            character={card.character}
-                            type={card.type}
-                            card={card.card}
-                            onAddTag={handleAddTag}
-                        />
-                    </div>
+                </div>
+                <div className="absolute bottom-[0.5rem] z-20 right-[1rem]">
+                    <button className={clsx(
+                        `rounded-b-xl py-2 px-4 bg-[${colors.sts_blue_dark}] border-x-4 border-b-4 border-[${colors.sts_blue}] ${kreon_light.className} hover:bg-[${colors.sts_blue_highlighted}]`,
+                        {
+                            [`bg-[${colors.sts_blue_highlighted}]`]: !hideTagDropdown,
+                        }
+                    )} onClick={() => setHideTagDropdown(!hideTagDropdown)}
+                    >
+                        Add tag
+                    </button>
+                    <TagDropdown 
+                        hidden={hideTagDropdown} 
+                        onAddTag={handleAddTag}
+                    />
                 </div>
             </div>
         </div>
