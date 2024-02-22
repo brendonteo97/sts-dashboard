@@ -10,7 +10,7 @@ import { CardList, CardOptions, CardTags } from "@/app/lib/definitions";
 import { kreon_bold } from "../fonts";
 
 export default function CardLibrary() {
-    const { modalCard, setModalCard } = useContext(AppContext);
+    const { modalCard, setModalCard, setUserTags } = useContext(AppContext);
     const [ cardOptions, setCardOptions ] = useState<CardOptions>({
         upgraded: false,
     });
@@ -60,7 +60,7 @@ export default function CardLibrary() {
 
     return (
         <div className="flex flex-col p-6">
-            <div className={`rounded-xl bg-gray-50 ${kreon_bold.className} text-lg text-gray-900 p-2`}>
+            <div className={`flex rounded-xl bg-gray-50 ${kreon_bold.className} text-lg text-gray-900 p-2 gap-6`}>
                 <label>
                     <input
                         type="checkbox"
@@ -69,8 +69,11 @@ export default function CardLibrary() {
                     />
                     Upgraded?
                 </label>
+                <button onClick={() => {
+                    setUserTags(CardTagsJson)
+                }}>Clear tags</button>
             </div>
-            <div className="grid grid-cols-5 gap-5 justify-center overflow-y-auto pt-10 p-6">
+            <div className="grid grid-cols-6 gap-5 justify-center overflow-y-auto pt-10 p-6">
                 {generateCards()}
                 <CardModal 
                     card={modalCard}
