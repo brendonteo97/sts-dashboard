@@ -1,24 +1,49 @@
-import { MouseEventHandler } from "react";
+import { MouseEventHandler, useContext, useEffect, useState } from "react";
 import Card from "@/app/ui/library/card";
-import * as Constants from "@/app/lib/constants";
-import { kreon } from "@/app/ui/fonts";
-import cardTagsJson from "@/app/lib/card-tags.json";
+import { kreon_light } from "@/app/ui/fonts";
 import { CardModal, CardTags } from "@/app/lib/definitions";
+import { AppContext } from "../app-context";
+import TagDropdown from "./tag-dropdown";
+import clsx from "clsx";
+import { colors } from "@/app/lib/constants";
 
 export default function CardModal({
-    card, onClose
+    card
 }: {
-    card: CardModal,
-    onClose: MouseEventHandler<HTMLDivElement>,
+    card: CardModal
 }) {
+    const { userTags, setModalCard } = useContext(AppContext);
+    const [ hideTagDropdown, setHideTagDropdown ] = useState(true);
+    const [ tags, setTags ] = useState([] as string[]);
+
+    useEffect(() => {
+        if (card.character.length !== 0 || card.type.length !== 0 || card.card.length !== 0) {
+            setTags(userTags[card.character][card.type][card.card]);
+        }
+    }, [card, userTags]);
+
+    const handleAddTag = (newTag: string) => {
+        setTags([...tags, newTag]);
+        userTags[card.character][card.type][card.card].push(newTag);
+        setHideTagDropdown(true);
+    }
+
+    const closeModal: MouseEventHandler<HTMLDivElement> = () => {
+        setModalCard({
+            character: "",
+            type: "",
+            card: "",
+            rarity: "",
+            upgraded: false,
+        });
+        setHideTagDropdown(true);
+    }
+
     if (card.character.length === 0 || card.type.length === 0 || card.card.length === 0) return null;
 
-    const cardTags = cardTagsJson as CardTags;
-    const tags = cardTags[card.character][card.type][card.card];
-
     return (
-        <div className="flex fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-30" onClick={onClose}>
-            <div className="flex flex-row h-fit items-center" onClick={(e) => e.stopPropagation()}>
+        <div className="flex fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-30" onClick={closeModal}>
+            <div className="flex flex-row h-fit items-center relative" onClick={(e) => e.stopPropagation()}>
                 <div className="bg-transparent z-40">
                     <Card 
                         character={card.character}
@@ -29,12 +54,27 @@ export default function CardModal({
                         setHover={false}
                     />
                 </div>
-                <div className="flex flex-col bg-[#9c9c9a] p-4 pl-[4.0rem] justify-start h-[350px] -ml-10 z-35 rounded-xl gap-[0.25rem]">
+                <div className={`grid grid-rows-6 grid-flow-col bg-[${colors.sts_blue}] p-4 pl-[4.0rem] justify-start h-[350px] -ml-10 z-30 rounded-xl gap-[1rem]`}>
                     {tags.map(tag => (
-                        <div key={tag} className={`rounded-xl ${kreon.className} text-xl bg-black p-0.5`}>
+                        <div key={tag} className={`rounded-xl ${kreon_light.className} text-xl text-center bg-[${colors.sts_blue_dark}] p-1`}>
                             {tag}
                         </div>
                     ))}
+                </div>
+                <div className="absolute bottom-[0.5rem] z-20 right-[1rem]">
+                    <button className={clsx(
+                        `rounded-b-xl py-2 px-4 bg-[${colors.sts_blue_dark}] border-x-4 border-b-4 border-[${colors.sts_blue}] ${kreon_light.className} hover:bg-[${colors.sts_blue_highlighted}]`,
+                        {
+                            [`bg-[${colors.sts_blue_highlighted}]`]: !hideTagDropdown,
+                        }
+                    )} onClick={() => setHideTagDropdown(!hideTagDropdown)}
+                    >
+                        Add tag
+                    </button>
+                    <TagDropdown 
+                        hidden={hideTagDropdown} 
+                        onAddTag={handleAddTag}
+                    />
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 import { useContext, useRef } from "react";
 import { AppContext } from "@/app/ui/app-context";
-import { Bar, getElementAtEvent } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 import { ChartOptions, ChartData } from "chart.js/auto";
 import { Chart, registerables } from "chart.js";
 import * as Constants from "@/app/lib/constants";
@@ -57,15 +57,6 @@ export default function WinrateGraph() {
             }
         }
     };
-
-    // const chartClick = (event: React.MouseEvent<HTMLCanvasElement>) => {
-    //     console.log(typeof(event))
-    //     if (chartRef.current) {
-    //         const chart = Chart.getChart(chartRef.current);
-    //         const element = getElementAtEvent(chartRef.current, event);
-    //         console.log(element);
-    //     }
-    // }
 
     return (
         <div className="justify-between rounded-xl bg-gray-50 p-4 aspect-[2/1] w-[48rem]">

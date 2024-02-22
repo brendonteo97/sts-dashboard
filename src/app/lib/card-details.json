@@ -1,611 +1,611 @@
 {
 	"ironclad": {
-	  "attacks": {
-		"anger": {
-		  "energy": 0,
-		  "description": "Deal 6 damage.\nAdd a copy of this card into your discard pile."
-		},
-		"bash": {
-		  "energy": 2,
-		  "description": "Deal 8 damage.\nApply 2 Vulnerable."
-		},
-		"blood_for_blood": {
-		  "energy": 4,
-		  "description": "Costs 1 less energy for each time you lose HP this combat.\nDeal 18 damage."
-		},
-		"bludgeon": {
-		  "energy": 3,
-		  "description": "Deal 32 damage."
-		},
-		"body_slam": {
-		  "energy": 1,
-		  "description": "Deal damage equal to your Block."
-		},
-		"carnage": {
-		  "energy": 2,
-		  "description": "Ethereal.\nDeal 20 damage."
-		},
-		"clash": {
-		  "energy": 0,
-		  "description": "Can only be played if every card in your hand is an Attack.\nDeal 14 damage."
-		},
-		"cleave": {
-		  "energy": 1,
-		  "description": "Deal 8 damage to ALL enemies."
-		},
-		"clothesline": {
-		  "energy": 2,
-		  "description": "Deal 12 damage.\nApply 2 Weak."
-		},
-		"drop_kick": {
-		  "energy": 1,
-		  "description": "Deal 5 damage.\nIf the enemy is Vulnerable, gain 1 Energy and draw 1 card."
-		},
-		"feed": {
-		  "energy": 1,
-		  "description": "Deal 10 damage.\nIf this kills a non-minion enemy, gain 3 permanent Max HP."
-		},
-		"fiend_fire": {
-		  "energy": 2,
-		  "description": "Exhaust your hand.\nDeal 7 damage for each exhausted card."
-		},
-		"headbutt": {
-		  "energy": 1,
-		  "description": "Deal 9 damage.\nPlace a card from your discard pile on top of your draw pile."
-		},
-		"heavy_blade": {
-		  "energy": 2,
-		  "description": "Deal 14 damage.\nStrength affects Heavy Blade 3 times."
-		},
-		"hemokinesis": {
-		  "energy": 1,
-		  "description": "Lose 2 HP.\nDeal 15 damage."
-		},
-		"immolate": {
-		  "energy": 2,
-		  "description": "Deal 21 damage to ALL enemies.\nAdd a Burn to your discard pile."
-		},
-		"iron_wave": {
-		  "energy": 1,
-		  "description": "Deal 5 damage.\nGain 5 Block."
-		},
-		"perfected_strike": {
-		  "energy": 2,
-		  "description": "Deal 6 damage.\nDeals 2 additional damage for ALL your cards containing \"Strike\"."
-		},
-		"pommel_strike": {
-		  "energy": 1,
-		  "description": "Deal 9 damage.\nDraw 1 card."
-		},
-		"pummel": {
-		  "energy": 1,
-		  "description": "Deal 2 damage 5 times.\nExhaust."
-		},
-		"rampage": {
-		  "energy": 1,
-		  "description": "Deal 8 damage.\nIncreases this card's damage by 5 this combat."
-		},
-		"reaper": {
-		  "energy": 2,
-		  "description": "Deal 4 damage to ALL enemies.\nHeal for unblocked damage dealt."
-		},
-		"reckless_charge": {
-		  "energy": 0,
-		  "description": "Deal 7 damage.\nApply 2 Vulnerable to yourself."
-		},
-		"searing_blow": {
-		  "energy": 2,
-		  "description": "Deal 12 damage.\nCan be upgraded any number of times."
-		},
-		"sever_soul": {
-		  "energy": 1,
-		  "description": "Exhaust all non-Attack cards in your hand.\nDeal 12 damage."
-		},
-		"strike": {
-		  "energy": 1,
-		  "description": "Deal 6 damage."
-		},
-		"sword_boomerang": {
-		  "energy": 1,
-		  "description": "Deal 3 damage to a random enemy 3 times."
-		},
-		"thunder_clap": {
-		  "energy": 1,
-		  "description": "Deal 4 damage and apply 1 Vulnerable to ALL enemies."
-		},
-		"twin_strike": {
-		  "energy": 1,
-		  "description": "Deal 5 damage twice."
-		},
-		"uppercut": {
-		  "energy": 2,
-		  "description": "Deal 13 damage.\nApply 1 Vulnerable and 1 Weak."
-		},
-		"whirlwind": {
-		  "energy": 1,
-		  "description": "Deal 5 damage to ALL enemies X times."
-		},
-		"wild_strike": {
-		  "energy": 1,
-		  "description": "Deal 12 damage.\nShuffle a Wound into your draw pile."
-		},
-		"anger+": {
-		  "energy": 0,
-		  "description": "Deal 9 damage.\nAdd a copy of this card into your discard pile."
-		},
-		"bash+": {
-		  "energy": 2,
-		  "description": "Deal 10 damage.\nApply 3 Vulnerable."
-		},
-		"blood_for_blood+": {
-		  "energy": 3,
-		  "description": "Costs 1 less energy for each time you lose HP this combat.\nDeal 22 damage."
-		},
-		"bludgeon+": {
-		  "energy": 3,
-		  "description": "Deal 42 damage."
-		},
-		"body_slam+": {
-		  "energy": 0,
-		  "description": "Deal damage equal to your Block."
-		},
-		"carnage+": {
-		  "energy": 2,
-		  "description": "Ethereal.\nDeal 28 damage."
-		},
-		"clash+": {
-		  "energy": 0,
-		  "description": "Can only be played if every card in your hand is an Attack.\nDeal 18 damage."
-		},
-		"cleave+": {
-		  "energy": 1,
-		  "description": "Deal 11 damage to ALL enemies."
-		},
-		"clothesline+": {
-		  "energy": 2,
-		  "description": "Deal 14 damage.\nApply 3 Weak."
-		},
-		"drop_kick+": {
-		  "energy": 1,
-		  "description": "Deal 8 damage.\nIf the enemy is Vulnerable, gain 1 Energy and draw 1 card."
-		},
-		"feed+": {
-		  "energy": 1,
-		  "description": "Deal 12 damage.\nIf this kills a non-minion enemy, gain 4 permanent Max HP."
-		},
-		"fiend_fire+": {
-		  "energy": 2,
-		  "description": "Exhaust your hand.\nDeal 10 damage for each exhausted card."
-		},
-		"headbutt+": {
-		  "energy": 1,
-		  "description": "Deal 12 damage.\nPlace a card from your discard pile on top of your draw pile."
-		},
-		"heavy_blade+": {
-		  "energy": 2,
-		  "description": "Deal 14 damage.\nStrength affects Heavy Blade 5 times."
-		},
-		"hemokinesis+": {
-		  "energy": 1,
-		  "description": "Lose 2 HP.\nDeal 20 damage."
-		},
-		"immolate+": {
-		  "energy": 2,
-		  "description": "Deal 28 damage to ALL enemies.\nAdd a Burn to your discard pile."
-		},
-		"iron_wave+": {
-		  "energy": 1,
-		  "description": "Deal 7 damage. Gain 7 Block."
-		},
-		"perfected_strike+": {
-		  "energy": 2,
-		  "description": "Deal 6 damage.\nDeals 3 additional damage for ALL your cards containing \"Strike\"."
-		},
-		"pommel_strike+": {
-		  "energy": 1,
-		  "description": "Deal 10 damage.\nDraw 2 card."
-		},
-		"pummel+": {
-		  "energy": 1,
-		  "description": "Deal 2 damage 5 times.\nExhaust"
-		},
-		"rampage+": {
-		  "energy": 1,
-		  "description": "Deal 8 damage.\nIncreases this card's damage by 8 this combat."
-		},
-		"reaper+": {
-		  "energy": 2,
-		  "description": "Deal 5 damage to ALL enemies.\nHeal for unblocked damage dealt.\nExhaust."
-		},
-		"reckless_charge+": {
-		  "energy": 0,
-		  "description": "Deal 10 damage.\nShuffle a Dazed into your draw pile."
-		},
-		"searing_blow+": {
-		  "energy": 2,
-		  "description": "Deal 16 damage. Can be Upgraded any number of times."
-		},
-		"sever_soul+": {
-		  "energy": 2,
-		  "description": "Exhaust all non-Attack cards in your hand.\nDeal 22 damage."
-		},
-		"strike+": {
-		  "energy": 1,
-		  "description": "Deal 9 damage."
-		},
-		"sword_boomerang+": {
-		  "energy": 1,
-		  "description": "Deal 3 damage to a random enemy 4 times."
-		},
-		"thunder_clap+": {
-		  "energy": 1,
-		  "description": "Deal 7 damage and apply 1 Vulnerable to ALL enemies."
-		},
-		"twin_strike+": {
-		  "energy": 1,
-		  "description": "Deal 7 damage twice."
-		},
-		"uppercut+": {
-		  "energy": 2,
-		  "description": "Deal 13 damage.\nApply 2 Vulnerable and 2 Weak."
-		},
-		"whirlwind+": {
-		  "energy": 1,
-		  "description": "Deal 8 damage to ALL enemies X times."
-		},
-		"wild_strike+": {
-		  "energy": 1,
-		  "description": "Deal 17 damage.\nShuffle a Wound into your draw pile."
+	  	"attacks": {
+			"anger": {
+				"energy": 0,
+				"description": "Deal 6 damage.\nAdd a copy of this card into your discard pile."
+			},
+			"bash": {
+				"energy": 2,
+				"description": "Deal 8 damage.\nApply 2 Vulnerable."
+			},
+			"blood_for_blood": {
+				"energy": 4,
+				"description": "Costs 1 less energy for each time you lose HP this combat.\nDeal 18 damage."
+			},
+			"bludgeon": {
+				"energy": 3,
+				"description": "Deal 32 damage."
+			},
+			"body_slam": {
+				"energy": 1,
+				"description": "Deal damage equal to your Block."
+			},
+			"carnage": {
+				"energy": 2,
+				"description": "Ethereal.\nDeal 20 damage."
+			},
+			"clash": {
+				"energy": 0,
+				"description": "Can only be played if every card in your hand is an Attack.\nDeal 14 damage."
+			},
+			"cleave": {
+				"energy": 1,
+				"description": "Deal 8 damage to ALL enemies."
+			},
+			"clothesline": {
+				"energy": 2,
+				"description": "Deal 12 damage.\nApply 2 Weak."
+			},
+			"drop_kick": {
+				"energy": 1,
+				"description": "Deal 5 damage.\nIf the enemy is Vulnerable, gain 1 Energy and draw 1 card."
+			},
+			"feed": {
+				"energy": 1,
+				"description": "Deal 10 damage.\nIf this kills a non-minion enemy, gain 3 permanent Max HP."
+			},
+			"fiend_fire": {
+				"energy": 2,
+				"description": "Exhaust your hand.\nDeal 7 damage for each exhausted card."
+			},
+			"headbutt": {
+				"energy": 1,
+				"description": "Deal 9 damage.\nPlace a card from your discard pile on top of your draw pile."
+			},
+			"heavy_blade": {
+				"energy": 2,
+				"description": "Deal 14 damage.\nStrength affects Heavy Blade 3 times."
+			},
+			"hemokinesis": {
+				"energy": 1,
+				"description": "Lose 2 HP.\nDeal 15 damage."
+			},
+			"immolate": {
+				"energy": 2,
+				"description": "Deal 21 damage to ALL enemies.\nAdd a Burn to your discard pile."
+			},
+			"iron_wave": {
+				"energy": 1,
+				"description": "Deal 5 damage.\nGain 5 Block."
+			},
+			"perfected_strike": {
+				"energy": 2,
+				"description": "Deal 6 damage.\nDeals 2 additional damage for ALL your cards containing \"Strike\"."
+			},
+			"pommel_strike": {
+				"energy": 1,
+				"description": "Deal 9 damage.\nDraw 1 card."
+			},
+			"pummel": {
+				"energy": 1,
+				"description": "Deal 2 damage 5 times.\nExhaust."
+			},
+			"rampage": {
+				"energy": 1,
+				"description": "Deal 8 damage.\nIncreases this card's damage by 5 this combat."
+			},
+			"reaper": {
+				"energy": 2,
+				"description": "Deal 4 damage to ALL enemies.\nHeal for unblocked damage dealt."
+			},
+			"reckless_charge": {
+				"energy": 0,
+				"description": "Deal 7 damage.\nApply 2 Vulnerable to yourself."
+			},
+			"searing_blow": {
+				"energy": 2,
+				"description": "Deal 12 damage.\nCan be upgraded any number of times."
+			},
+			"sever_soul": {
+				"energy": 1,
+				"description": "Exhaust all non-Attack cards in your hand.\nDeal 12 damage."
+			},
+			"strike": {
+				"energy": 1,
+				"description": "Deal 6 damage."
+			},
+			"sword_boomerang": {
+				"energy": 1,
+				"description": "Deal 3 damage to a random enemy 3 times."
+			},
+			"thunder_clap": {
+				"energy": 1,
+				"description": "Deal 4 damage and apply 1 Vulnerable to ALL enemies."
+			},
+			"twin_strike": {
+				"energy": 1,
+				"description": "Deal 5 damage twice."
+			},
+			"uppercut": {
+				"energy": 2,
+				"description": "Deal 13 damage.\nApply 1 Vulnerable and 1 Weak."
+			},
+			"whirlwind": {
+				"energy": 1,
+				"description": "Deal 5 damage to ALL enemies X times."
+			},
+			"wild_strike": {
+				"energy": 1,
+				"description": "Deal 12 damage.\nShuffle a Wound into your draw pile."
+			},
+			"anger+": {
+				"energy": 0,
+				"description": "Deal 9 damage.\nAdd a copy of this card into your discard pile."
+			},
+			"bash+": {
+				"energy": 2,
+				"description": "Deal 10 damage.\nApply 3 Vulnerable."
+			},
+			"blood_for_blood+": {
+				"energy": 3,
+				"description": "Costs 1 less energy for each time you lose HP this combat.\nDeal 22 damage."
+			},
+			"bludgeon+": {
+				"energy": 3,
+				"description": "Deal 42 damage."
+			},
+			"body_slam+": {
+				"energy": 0,
+				"description": "Deal damage equal to your Block."
+			},
+			"carnage+": {
+				"energy": 2,
+				"description": "Ethereal.\nDeal 28 damage."
+			},
+			"clash+": {
+				"energy": 0,
+				"description": "Can only be played if every card in your hand is an Attack.\nDeal 18 damage."
+			},
+			"cleave+": {
+				"energy": 1,
+				"description": "Deal 11 damage to ALL enemies."
+			},
+			"clothesline+": {
+				"energy": 2,
+				"description": "Deal 14 damage.\nApply 3 Weak."
+			},
+			"drop_kick+": {
+				"energy": 1,
+				"description": "Deal 8 damage.\nIf the enemy is Vulnerable, gain 1 Energy and draw 1 card."
+			},
+			"feed+": {
+				"energy": 1,
+				"description": "Deal 12 damage.\nIf this kills a non-minion enemy, gain 4 permanent Max HP."
+			},
+			"fiend_fire+": {
+				"energy": 2,
+				"description": "Exhaust your hand.\nDeal 10 damage for each exhausted card."
+			},
+			"headbutt+": {
+				"energy": 1,
+				"description": "Deal 12 damage.\nPlace a card from your discard pile on top of your draw pile."
+			},
+			"heavy_blade+": {
+				"energy": 2,
+				"description": "Deal 14 damage.\nStrength affects Heavy Blade 5 times."
+			},
+			"hemokinesis+": {
+				"energy": 1,
+				"description": "Lose 2 HP.\nDeal 20 damage."
+			},
+			"immolate+": {
+				"energy": 2,
+				"description": "Deal 28 damage to ALL enemies.\nAdd a Burn to your discard pile."
+			},
+			"iron_wave+": {
+				"energy": 1,
+				"description": "Deal 7 damage. Gain 7 Block."
+			},
+			"perfected_strike+": {
+				"energy": 2,
+				"description": "Deal 6 damage.\nDeals 3 additional damage for ALL your cards containing \"Strike\"."
+			},
+			"pommel_strike+": {
+				"energy": 1,
+				"description": "Deal 10 damage.\nDraw 2 card."
+			},
+			"pummel+": {
+				"energy": 1,
+				"description": "Deal 2 damage 5 times.\nExhaust"
+			},
+			"rampage+": {
+				"energy": 1,	
+				"description": "Deal 8 damage.\nIncreases this card's damage by 8 this combat."
+			},
+			"reaper+": {
+				"energy": 2,
+				"description": "Deal 5 damage to ALL enemies.\nHeal for unblocked damage dealt.\nExhaust."
+			},
+			"reckless_charge+": {
+				"energy": 0,
+				"description": "Deal 10 damage.\nShuffle a Dazed into your draw pile."
+			},
+			"searing_blow+": {
+				"energy": 2,
+				"description": "Deal 16 damage. Can be Upgraded any number of times."
+			},
+			"sever_soul+": {
+				"energy": 2,
+				"description": "Exhaust all non-Attack cards in your hand.\nDeal 22 damage."
+			},
+			"strike+": {
+				"energy": 1,
+				"description": "Deal 9 damage."
+			},
+			"sword_boomerang+": {
+				"energy": 1,
+				"description": "Deal 3 damage to a random enemy 4 times."
+			},
+			"thunder_clap+": {
+				"energy": 1,
+				"description": "Deal 7 damage and apply 1 Vulnerable to ALL enemies."
+			},
+			"twin_strike+": {
+				"energy": 1,
+				"description": "Deal 7 damage twice."
+			},
+			"uppercut+": {
+				"energy": 2,
+				"description": "Deal 13 damage.\nApply 2 Vulnerable and 2 Weak."
+			},
+			"whirlwind+": {
+				"energy": 1,
+				"description": "Deal 8 damage to ALL enemies X times."
+			},
+			"wild_strike+": {
+				"energy": 1,
+				"description": "Deal 17 damage.\nShuffle a Wound into your draw pile."
+			}
+	  	},
+	  	"skills": {
+			"armaments": {
+				"energy": 1,
+				"description": "Gain 5 Block.\nUpgrade a card in your hand for the rest of combat."
+			},
+			"battle_trance": {
+				"energy": 0,
+				"description": "Draw 3 cards.\nYou cannot draw additional cards this turn."
+			},
+			"bloodletting": {
+				"energy": 0,
+				"description": "Lose 3 HP.\nGain 2 Energy."
+			},
+			"burning_pact": {
+				"energy": 1,
+				"description": "Exhaust 1 card.\nDraw 2 cards."
+			},
+			"defend": {
+				"energy": 1,
+				"description": "Gain 5 Block."
+			},
+			"disarm": {
+				"energy": 1,
+				"description": "Enemy loses 2 Strength.\nExhaust."
+			},
+			"double_tap": {
+				"energy": 1,
+				"description": "This turn, your next Attack is played twice."
+			},
+			"dual_wield": {
+				"energy": 1,
+				"description": "Choose an Attack or Power card. Add a copy of that card into your hand."
+			},
+			"entrench": {
+				"energy": 2,
+				"description": "Double your Block."
+			},
+			"exhume": {
+				"energy": 1,
+				"description": "Put a card from your Exhaust pile into your hand."
+			},
+			"flame_barrier": {
+				"energy": 2,
+				"description": "Gain 12 Block.\nWhenever you are attacked this turn, deal 4 damage back."
+			},
+			"flex": {
+				"energy": 0,
+				"description": "Gain 2 Strength.\nAt the end of your turn, lose 2 Strength."
+			},
+			"ghostly_armor": {
+				"energy": 1,
+				"description": "Ethereal.\nGain 10 Block."
+			},
+			"havoc": {
+				"energy": 1,
+				"description": "Play the top card of your draw pile and Exhaust it."
+			},
+			"impervious": {
+				"energy": 2,
+				"description": "Gain 30 Block.\nExhaust."
+			},
+			"infernal_blade": {
+				"energy": 1,
+				"description": "Add a random Attack to your hand.\nIt costs 0 this turn.\nExhaust."
+			},
+			"intimidate": {
+				"energy": 0,
+				"description": "Apply 1 Weak to ALL enemies.\nExhaust."
+			},
+			"limit_break": {
+				"energy": 1,
+				"description": "Double your Strength.\nExhaust."
+			},
+			"offering": {
+				"energy": 0,
+				"description": "Lose 6 HP.\nGain 2 Energy.\nDraw 3 cards.\nExhaust."
+			},
+			"power_through": {
+				"energy": 1,
+				"description": "Add 2 Wounds to your hand.\nGain 15 Block."
+			},
+			"rage": {
+				"energy": 0,
+				"description": "Whenever you play an Attack this turn, gain 3 Block."
+			},
+			"second_wind": {
+				"energy": 1,
+				"description": "Exhaust all non-Attack cards in your hand.\nGain 5 Block for each card exhausted."
+			},
+			"seeing_red": {
+				"energy": 1,
+				"description": "Gain 2 Energy.\nExhaust."
+			},
+			"sentinel": {
+				"energy": 1,
+				"description": "Gain 5 Block.\nIf this card is Exhausted, gain 2 Energy."
+			},
+			"shockwave": {
+				"energy": 2,
+				"description": "Apply 3 Weak and 3 Vulnerable to ALL enemies.\nExhaust."
+			},
+			"shrug_it_off": {
+				"energy": 1,
+				"description": "Gain 8 Block.\nDraw 1 card."
+			},
+			"spot_weakness": {
+				"energy": 1,
+				"description": "If the enemy intends to attack, gain 3 Strength."
+			},
+			"true_grit": {
+				"energy": 1,
+				"description": "Gain 9 Block.\nExhaust 1 card at random."
+			},
+			"warcry": {
+				"energy": 0,
+				"description": "Draw 1 card.\nPut a card from your hand on top of your draw pile."
+			},
+			"armaments+": {
+				"energy": 1,
+				"description": "Gain 5 Block.\nUpgrade all cards in your hand for the rest of combat."
+			},
+			"battle_trance+": {
+				"energy": 0,
+				"description": "Draw 4 cards.\nYou cannot draw additional cards this turn."
+			},
+			"bloodletting+": {
+				"energy": 0,
+				"description": "Lose 3 HP.\nGain 3 Energy."
+			},
+			"burning_pact+": {
+				"energy": 1,
+				"description": "Exhaust 1 card.\nDraw 3 cards."
+			},
+			"defend+": {
+				"energy": 1,
+				"description": "Gain 8 Block."
+			},
+			"disarm+": {
+				"energy": 1,
+				"description": "Enemy loses 3 Strength.\nExhaust."
+			},
+			"double_tap+": {
+				"energy": 1,
+				"description": "This turn, your next 2 Attacks is played twice."
+			},
+			"dual_wield+": {
+				"energy": 1,
+				"description": "Choose an Attack or Power card. Add 2 copies of that card into your hand."
+			},
+			"entrench+": {
+				"energy": 1,
+				"description": "Double your Block."
+			},
+			"exhume+": {
+				"energy": 0,
+				"description": "Put a card from your Exhaust pile into your hand."
+			},
+			"flame_barrier+": {
+				"energy": 2,
+				"description": "Gain 16 Block.\nWhenever you are attacked this turn, deal 6 damage back."
+			},
+			"flex+": {
+				"energy": 0,
+				"description": "Gain 4 Strength.\nAt the end of your turn, lose 4 Strength."
+			},
+			"ghostly_armor+": {
+				"energy": 1,
+				"description": "Ethereal.\nGain 13 Block."
+			},
+			"havoc+": {
+				"energy": 0,
+				"description": "Play the top card of your draw pile and Exhaust it."
+			},
+			"impervious+": {
+				"energy": 2,
+				"description": "Gain 40 Block.\nExhaust."
+			},
+			"infernal_blade+": {
+				"energy": 0,
+				"description": "Add a random Attack to your hand.\nIt costs 0 this turn.\nExhaust."
+			},
+			"intimidate+": {
+				"energy": 0,
+				"description": "Apply 2 Weak to ALL enemies.\nExhaust."
+			},
+			"limit_break+": {
+				"energy": 1,
+				"description": "Double your Strength."
+			},
+			"offering+": {
+				"energy": 0,
+				"description": "Lose 6 HP.\nGain 2 Energy.\nDraw 5 cards.\nExhaust."
+			},
+			"power_through+": {
+				"energy": 1,
+				"description": "Add 2 Wounds to your hand.\nGain 20 Block."
+			},
+			"rage+": {
+				"energy": 0,
+				"description": "Whenever you play an Attack this turn, gain 5 Block."
+			},
+			"second_wind+": {
+				"energy": 1,
+				"description": "Exhaust all non-Attack cards in your hand.\nGain 7 Block for each card exhausted."
+			},
+			"seeing_red+": {
+				"energy": 0,
+				"description": "Gain 2 Energy.\nExhaust."
+			},
+			"sentinel+": {
+				"energy": 1,
+				"description": "Gain 8 Block.\nIf this card is Exhausted, gain 3 Energy."
+			},
+			"shockwave+": {
+				"energy": 2,
+				"description": "Apply 5 Weak and 5 Vulnerable to ALL enemies.\nExhaust."
+			},
+			"shrug_it_off+": {
+				"energy": 1,
+				"description": "Gain 11 Block.\nDraw 1 card."
+			},
+			"spot_weakness+": {
+				"energy": 1,
+				"description": "If the enemy intends to attack, gain 4 Strength."
+			},
+			"true_grit+": {
+				"energy": 1,
+				"description": "Gain 9 Block.\nExhaust 1 card."
+			},
+			"warcry+": {
+				"energy": 0,
+				"description": "Draw 2 card.\nPut a card from your hand on top of your draw pile."
+			}
+	  	},
+	  	"powers": {
+			"barricade": {
+				"energy": 3,
+				"description": "Block no longer expires at the start of your turn."
+			},
+			"berserk": {
+				"energy": 0,
+				"description": "Gain 2 Vulnerable.\nAt the start of your turn, gain 1 Energy."
+			},
+			"brutality": {
+				"energy": 0,
+				"description": "At the start of your turn, lose 1 HP and draw 1 card."
+			},
+			"combust": {
+				"energy": 1,
+				"description": "At the end of your turn, lose 1 HP and deal 5 damage to ALL enemies."
+			},
+			"corruption": {
+				"energy": 3,
+				"description": "Skills cost 0.\nWhenever you play a Skill, Exhaust it."
+			},
+			"dark_embrace": {
+				"energy": 2,
+				"description": "Whenever a card is Exhausted, draw 1 card."
+			},
+			"demon_form": {
+				"energy": 3,
+				"description": "At the start of each turn, gain 2 Strength."
+			},
+			"evolve": {
+				"energy": 1,
+				"description": "Whenever you draw a Status or Curse card, draw 1 card."
+			},
+			"feel_no_pain": {
+				"energy": 1,
+				"description": "Whenever a card is Exhausted, gain 3 Block."
+			},
+			"fire_breathing": {
+				"energy": 1,
+				"description": "Whenever you draw a Status or Curse card, deal 6 damage to ALL enemies."
+			},
+			"inflame": {
+				"energy": 1,
+				"description": "Gain 2 Strength."
+			},
+			"juggernaut": {
+				"energy": 2,
+				"description": "Whenever you gain Block, deal 5 damage to a random enemy."
+			},
+			"metallicize": {
+				"energy": 1,
+				"description": "At the end of your turn, gain 3 Block."
+			},
+			"rupture": {
+				"energy": 1,
+				"description": "Whenever you lose HP from a card, gain 1 Strength."
+			},
+			"barricade+": {
+				"energy": 2,
+				"description": "Block no longer expires at the start of your turn."
+			},
+			"berserk+": {
+				"energy": 0,
+				"description": "Gain 1 Vulnerable.\nAt the start of your turn, gain 1 Energy."
+			},
+			"brutality+": {
+				"energy": 0,
+				"description": "Innate.\nAt the start of your turn, lose 1 HP and draw 1 card."
+			},
+			"combust+": {
+				"energy": 1,
+				"description": "At the end of your turn, lose 1 HP and deal 7 damage to ALL enemies."
+			},
+			"corruption+": {
+				"energy": 2,
+				"description": "Skills cost 0.\nWhenever you play a Skill, Exhaust it."
+			},
+			"dark_embrace+": {
+				"energy": 1,
+				"description": "Whenever a card is Exhausted, draw 1 card."
+			},
+			"demon_form+": {
+				"energy": 3,
+				"description": "At the start of each turn, gain 3 Strength."
+			},
+			"evolve+": {
+				"energy": 1,
+				"description": "Whenever you draw a Status card, draw 2 cards."
+			},
+			"feel_no_pain+": {
+				"energy": 1,
+				"description": "Whenever a card is Exhausted, gain 4 Block."
+			},
+			"fire_breathing+": {
+				"energy": 1,
+				"description": "Whenever you draw a Status or Curse card, deal 10 damage to ALL enemies."
+			},
+			"inflame+": {
+				"energy": 1,
+				"description": "Gain 3 Strength."
+			},
+			"juggernaut+": {
+				"energy": 2,
+				"description": "Whenever you gain Block, deal 7 damage to a random enemy."
+			},
+			"metallicize+": {
+				"energy": 1,
+				"description": "At the end of your turn, gain 4 Block."
+			},
+			"rupture+": {
+				"energy": 1,
+				"description": "Whenever you lose HP from a card, gain 2 Strength."
+			}
 		}
-	  },
-	  "skills": {
-		"armaments": {
-		  "energy": 1,
-		  "description": "Gain 5 Block.\nUpgrade a card in your hand for the rest of combat."
-		},
-		"battle_trance": {
-		  "energy": 0,
-		  "description": "Draw 3 cards.\nYou cannot draw additional cards this turn."
-		},
-		"bloodletting": {
-		  "energy": 0,
-		  "description": "Lose 3 HP.\nGain 2 Energy."
-		},
-		"burning_pact": {
-		  "energy": 1,
-		  "description": "Exhaust 1 card.\nDraw 2 cards."
-		},
-		"defend": {
-		  "energy": 1,
-		  "description": "Gain 5 Block."
-		},
-		"disarm": {
-		  "energy": 1,
-		  "description": "Enemy loses 2 Strength.\nExhaust."
-		},
-		"double_tap": {
-		  "energy": 1,
-		  "description": "This turn, your next Attack is played twice."
-		},
-		"dual_wield": {
-		  "energy": 1,
-		  "description": "Choose an Attack or Power card. Add a copy of that card into your hand."
-		},
-		"entrench": {
-		  "energy": 2,
-		  "description": "Double your Block."
-		},
-		"exhume": {
-		  "energy": 1,
-		  "description": "Put a card from your Exhaust pile into your hand."
-		},
-		"flame_barrier": {
-		  "energy": 2,
-		  "description": "Gain 12 Block.\nWhenever you are attacked this turn, deal 4 damage back."
-		},
-		"flex": {
-		  "energy": 0,
-		  "description": "Gain 2 Strength.\nAt the end of your turn, lose 2 Strength."
-		},
-		"ghostly_armor": {
-		  "energy": 1,
-		  "description": "Ethereal.\nGain 10 Block."
-		},
-		"havoc": {
-		  "energy": 1,
-		  "description": "Play the top card of your draw pile and Exhaust it."
-		},
-		"impervious": {
-		  "energy": 2,
-		  "description": "Gain 30 Block.\nExhaust."
-		},
-		"infernal_blade": {
-		  "energy": 1,
-		  "description": "Add a random Attack to your hand.\nIt costs 0 this turn.\nExhaust."
-		},
-		"intimidate": {
-		  "energy": 0,
-		  "description": "Apply 1 Weak to ALL enemies.\nExhaust."
-		},
-		"limit_break": {
-		  "energy": 1,
-		  "description": "Double your Strength.\nExhaust."
-		},
-		"offering": {
-		  "energy": 0,
-		  "description": "Lose 6 HP.\nGain 2 Energy.\nDraw 3 cards.\nExhaust."
-		},
-		"power_through": {
-		  "energy": 1,
-		  "description": "Add 2 Wounds to your hand.\nGain 15 Block."
-		},
-		"rage": {
-		  "energy": 0,
-		  "description": "Whenever you play an Attack this turn, gain 3 Block."
-		},
-		"second_wind": {
-		  "energy": 1,
-		  "description": "Exhaust all non-Attack cards in your hand.\nGain 5 Block for each card exhausted."
-		},
-		"seeing_red": {
-		  "energy": 1,
-		  "description": "Gain 2 Energy.\nExhaust."
-		},
-		"sentinel": {
-		  "energy": 1,
-		  "description": "Gain 5 Block.\nIf this card is Exhausted, gain 2 Energy."
-		},
-		"shockwave": {
-		  "energy": 2,
-		  "description": "Apply 3 Weak and 3 Vulnerable to ALL enemies.\nExhaust."
-		},
-		"shrug_it_off": {
-		  "energy": 1,
-		  "description": "Gain 8 Block.\nDraw 1 card."
-		},
-		"spot_weakness": {
-		  "energy": 1,
-		  "description": "If the enemy intends to attack, gain 3 Strength."
-		},
-		"true_grit": {
-		  "energy": 1,
-		  "description": "Gain 9 Block.\nExhaust 1 card at random."
-		},
-		"warcry": {
-		  "energy": 0,
-		  "description": "Draw 1 card.\nPut a card from your hand on top of your draw pile."
-		},
-		"armaments+": {
-			"energy": 1,
-			"description": "Gain 5 Block.\nUpgrade all cards in your hand for the rest of combat."
-		  },
-		  "battle_trance+": {
-			"energy": 0,
-			"description": "Draw 4 cards.\nYou cannot draw additional cards this turn."
-		  },
-		  "bloodletting+": {
-			"energy": 0,
-			"description": "Lose 3 HP.\nGain 3 Energy."
-		  },
-		  "burning_pact+": {
-			"energy": 1,
-			"description": "Exhaust 1 card.\nDraw 3 cards."
-		  },
-		  "defend+": {
-			"energy": 1,
-			"description": "Gain 8 Block."
-		  },
-		  "disarm+": {
-			"energy": 1,
-			"description": "Enemy loses 3 Strength.\nExhaust."
-		  },
-		  "double_tap+": {
-			"energy": 1,
-			"description": "This turn, your next 2 Attacks is played twice."
-		  },
-		  "dual_wield+": {
-			"energy": 1,
-			"description": "Choose an Attack or Power card. Add 2 copies of that card into your hand."
-		  },
-		  "entrench+": {
-			"energy": 1,
-			"description": "Double your Block."
-		  },
-		  "exhume+": {
-			"energy": 0,
-			"description": "Put a card from your Exhaust pile into your hand."
-		  },
-		  "flame_barrier+": {
-			"energy": 2,
-			"description": "Gain 16 Block.\nWhenever you are attacked this turn, deal 6 damage back."
-		  },
-		  "flex+": {
-			"energy": 0,
-			"description": "Gain 4 Strength.\nAt the end of your turn, lose 4 Strength."
-		  },
-		  "ghostly_armor+": {
-			"energy": 1,
-			"description": "Ethereal.\nGain 13 Block."
-		  },
-		  "havoc+": {
-			"energy": 0,
-			"description": "Play the top card of your draw pile and Exhaust it."
-		  },
-		  "impervious+": {
-			"energy": 2,
-			"description": "Gain 40 Block.\nExhaust."
-		  },
-		  "infernal_blade+": {
-			"energy": 0,
-			"description": "Add a random Attack to your hand.\nIt costs 0 this turn.\nExhaust."
-		  },
-		  "intimidate+": {
-			"energy": 0,
-			"description": "Apply 2 Weak to ALL enemies.\nExhaust."
-		  },
-		  "limit_break+": {
-			"energy": 1,
-			"description": "Double your Strength."
-		  },
-		  "offering+": {
-			"energy": 0,
-			"description": "Lose 6 HP.\nGain 2 Energy.\nDraw 5 cards.\nExhaust."
-		  },
-		  "power_through+": {
-			"energy": 1,
-			"description": "Add 2 Wounds to your hand.\nGain 20 Block."
-		  },
-		  "rage+": {
-			"energy": 0,
-			"description": "Whenever you play an Attack this turn, gain 5 Block."
-		  },
-		  "second_wind+": {
-			"energy": 1,
-			"description": "Exhaust all non-Attack cards in your hand.\nGain 7 Block for each card exhausted."
-		  },
-		  "seeing_red+": {
-			"energy": 0,
-			"description": "Gain 2 Energy.\nExhaust."
-		  },
-		  "sentinel+": {
-			"energy": 1,
-			"description": "Gain 8 Block.\nIf this card is Exhausted, gain 3 Energy."
-		  },
-		  "shockwave+": {
-			"energy": 2,
-			"description": "Apply 5 Weak and 5 Vulnerable to ALL enemies.\nExhaust."
-		  },
-		  "shrug_it_off+": {
-			"energy": 1,
-			"description": "Gain 11 Block.\nDraw 1 card."
-		  },
-		  "spot_weakness+": {
-			"energy": 1,
-			"description": "If the enemy intends to attack, gain 4 Strength."
-		  },
-		  "true_grit+": {
-			"energy": 1,
-			"description": "Gain 9 Block.\nExhaust 1 card."
-		  },
-		  "warcry+": {
-			"energy": 0,
-			"description": "Draw 2 card.\nPut a card from your hand on top of your draw pile."
-		  }
-	  },
-	  "powers": {
-		"barricade": {
-		  "energy": 3,
-		  "description": "Block no longer expires at the start of your turn."
-		},
-		"berserk": {
-		  "energy": 0,
-		  "description": "Gain 2 Vulnerable.\nAt the start of your turn, gain 1 Energy."
-		},
-		"brutality": {
-		  "energy": 0,
-		  "description": "At the start of your turn, lose 1 HP and draw 1 card."
-		},
-		"combust": {
-		  "energy": 1,
-		  "description": "At the end of your turn, lose 1 HP and deal 5 damage to ALL enemies."
-		},
-		"corruption": {
-		  "energy": 3,
-		  "description": "Skills cost 0.\nWhenever you play a Skill, Exhaust it."
-		},
-		"dark_embrace": {
-		  "energy": 2,
-		  "description": "Whenever a card is Exhausted, draw 1 card."
-		},
-		"demon_form": {
-		  "energy": 3,
-		  "description": "At the start of each turn, gain 2 Strength."
-		},
-		"evolve": {
-		  "energy": 1,
-		  "description": "Whenever you draw a Status or Curse card, draw 1 card."
-		},
-		"feel_no_pain": {
-		  "energy": 1,
-		  "description": "Whenever a card is Exhausted, gain 3 Block."
-		},
-		"fire_breathing": {
-		  "energy": 1,
-		  "description": "Whenever you draw a Status or Curse card, deal 6 damage to ALL enemies."
-		},
-		"inflame": {
-		  "energy": 1,
-		  "description": "Gain 2 Strength."
-		},
-		"juggernaut": {
-		  "energy": 2,
-		  "description": "Whenever you gain Block, deal 5 damage to a random enemy."
-		},
-		"metallicize": {
-		  "energy": 1,
-		  "description": "At the end of your turn, gain 3 Block."
-		},
-		"rupture": {
-		  "energy": 1,
-		  "description": "Whenever you lose HP from a card, gain 1 Strength."
-		},
-		"barricade+": {
-			"energy": 2,
-			"description": "Block no longer expires at the start of your turn."
-		},
-		"berserk+": {
-			"energy": 0,
-			"description": "Gain 1 Vulnerable.\nAt the start of your turn, gain 1 Energy."
-		},
-		"brutality+": {
-			"energy": 0,
-			"description": "Innate.\nAt the start of your turn, lose 1 HP and draw 1 card."
-		},
-		"combust+": {
-			"energy": 1,
-			"description": "At the end of your turn, lose 1 HP and deal 7 damage to ALL enemies."
-		},
-		"corruption+": {
-			"energy": 2,
-			"description": "Skills cost 0.\nWhenever you play a Skill, Exhaust it."
-		},
-		"dark_embrace+": {
-			"energy": 1,
-			"description": "Whenever a card is Exhausted, draw 1 card."
-		},
-		"demon_form+": {
-			"energy": 3,
-			"description": "At the start of each turn, gain 3 Strength."
-		},
-		"evolve+": {
-			"energy": 1,
-			"description": "Whenever you draw a Status card, draw 2 cards."
-		},
-		"feel_no_pain+": {
-			"energy": 1,
-			"description": "Whenever a card is Exhausted, gain 4 Block."
-		},
-		"fire_breathing+": {
-			"energy": 1,
-			"description": "Whenever you draw a Status or Curse card, deal 10 damage to ALL enemies."
-		},
-		"inflame+": {
-			"energy": 1,
-			"description": "Gain 3 Strength."
-		},
-		"juggernaut+": {
-			"energy": 2,
-			"description": "Whenever you gain Block, deal 7 damage to a random enemy."
-		},
-		"metallicize+": {
-			"energy": 1,
-			"description": "At the end of your turn, gain 4 Block."
-		},
-		"rupture+": {
-			"energy": 1,
-			"description": "Whenever you lose HP from a card, gain 2 Strength."
-		}
-	}
-  }
+  	}
 }
   
