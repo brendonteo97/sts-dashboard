@@ -1,0 +1,26 @@
+{
+    "ironclad": [
+        "strike",
+        "strike",
+        "strike",
+        "strike",
+        "strike",
+        "defend",
+        "defend",
+        "defend",
+        "defend",
+        "bash"
+    ],
+    "defect": [
+        "strike",
+        "strike",
+        "strike",
+        "strike",
+        "defend",
+        "defend",
+        "defend",
+        "defend",
+        "zap",
+        "dualcast"
+    ]
+}

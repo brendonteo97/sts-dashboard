@@ -134,3 +134,7 @@ export type CardList = {
         [type: string]: string[]
     }
 }
+
+export type CardDefaults = {
+    [character: string]: string[]
+}

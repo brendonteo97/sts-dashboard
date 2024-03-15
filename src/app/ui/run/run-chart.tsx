@@ -9,14 +9,12 @@ import { Chart, ChartData, registerables } from 'chart.js';
 Chart.register(...registerables);
 
 export default function RunChart({ 
-    play_id 
+    run, onClick
 } : {
-    play_id: string
+    run: Run;
+    onClick: (floor: number) => void;
 }) {
-    const {runsContext} = useContext(AppContext);
     const chartRef = useRef();
-
-    const run = runsContext.find(runsContext => runsContext.play_id === play_id) as Run;
 
     const labels: number[] = run.path_per_floor.map((element, index) => index + 1);
     const hp_per_floor: number[] = run.current_hp_per_floor;
@@ -38,11 +36,12 @@ export default function RunChart({
     }
 
     const chartClick = (event: React.MouseEvent<HTMLCanvasElement>) => {
-        console.log(typeof(event))
         if (chartRef.current) {
             const chart = Chart.getChart(chartRef.current);
             const element = getElementAtEvent(chartRef.current, event);
-            console.log(element);
+            if (element.length !== 0) {
+                onClick(element[0].index);
+            }
         }
     }
 

@@ -1,5 +1,5 @@
 import { kreon } from "@/app/ui/fonts";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { AppContext } from "@/app/ui/app-context";
 import * as Constants from "@/app/lib/constants";
 
@@ -26,7 +26,7 @@ export default function RunFilters() {
         setRunFilters(prevFilters => ({ ...prevFilters, Characters: updatedCharacters}));
     }
 
-    React.useEffect(() => {
+    useEffect(() => {
         const filteredRuns = importedRuns.filter((run) => {
             const characterMatch = runFilters.Characters.includes(run.character_chosen);
             const victoryMatch = runFilters.Victory === null || runFilters.Victory === run.victory;

@@ -59,18 +59,11 @@ export const BarChartColors = [
     "purple"
 ]
 
-export const colors = {
-    sts_blue: "#405158",
-    sts_blue_highlighted: "#4e6672",
-    sts_blue_dark: "#222a2b",
-    sts_brown: "#ba8c3d",
-}
-
 export const FloorChartColors = [
     "#fff153",
     "#dfdfdf",
     "#66ecff",
-    colors.sts_brown,
+    '#ba8c3d',
     "#e681ff",
     "#97664a",
     "#ff9035",

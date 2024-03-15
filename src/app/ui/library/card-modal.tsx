@@ -5,7 +5,6 @@ import { CardModal, CardTags } from "@/app/lib/definitions";
 import { AppContext } from "../app-context";
 import TagDropdown from "./tag-dropdown";
 import clsx from "clsx";
-import { colors } from "@/app/lib/constants";
 
 export default function CardModal({
     card
@@ -54,18 +53,18 @@ export default function CardModal({
                         setHover={false}
                     />
                 </div>
-                <div className={`grid grid-rows-6 grid-flow-col bg-[${colors.sts_blue}] p-4 pl-[4.0rem] justify-start h-[350px] -ml-10 z-30 rounded-xl gap-[1rem]`}>
+                <div className={`grid grid-rows-6 grid-flow-col bg-sts_blue p-4 pl-[4.0rem] justify-start h-[350px] -ml-10 z-30 rounded-xl gap-[1rem]`}>
                     {tags.map(tag => (
-                        <div key={tag} className={`rounded-xl ${kreon_light.className} text-xl text-center bg-[${colors.sts_blue_dark}] p-1`}>
+                        <div key={tag} className={`rounded-xl ${kreon_light.className} text-xl text-center bg-sts_blue_dark p-1`}>
                             {tag}
                         </div>
                     ))}
                 </div>
                 <div className="absolute bottom-[0.5rem] z-20 right-[1rem]">
                     <button className={clsx(
-                        `rounded-b-xl py-2 px-4 bg-[${colors.sts_blue_dark}] border-x-4 border-b-4 border-[${colors.sts_blue}] ${kreon_light.className} hover:bg-[${colors.sts_blue_highlighted}]`,
+                        `rounded-b-xl py-2 px-4 bg-sts_blue_dark border-x-4 border-b-4 border-sts_blue ${kreon_light.className} hover:bg-sts_blue_highlighted`,
                         {
-                            [`bg-[${colors.sts_blue_highlighted}]`]: !hideTagDropdown,
+                            "bg-sts_blue_highlighted": !hideTagDropdown,
                         }
                     )} onClick={() => setHideTagDropdown(!hideTagDropdown)}
                     >
