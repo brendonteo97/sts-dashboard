@@ -1,13 +1,6 @@
 import * as Constants from '@/app/lib/constants';
-import { AppContext } from '../app-context';
+import { AppContext } from '../../app-context';
 import { useContext, useEffect, useState } from 'react';
-
-interface RunFilters {
-    Characters: string[],
-    Timestamp: number | null,
-    AscensionLevel: number | null,
-    Victory: boolean | null,
-}
 
 export default function CharacterDropdown({
     show
@@ -15,25 +8,19 @@ export default function CharacterDropdown({
     show: string
 }) {
     const { importedRuns, setRunsContext} = useContext(AppContext);
-    const [ runFilters, setRunFilters ] = useState<RunFilters>({
-        Characters: [Constants.Ironclad_Data, Constants.Silent_Data, Constants.Defect_Data, Constants.Watcher_Data],
-        Timestamp: null,
-        AscensionLevel: null,
-        Victory: null,
-    })
+    const [ runFilters, setRunFilters ] = useState<string[]>([])
 
     const toggleCharacterCheckbox = (character: string) => {
-        const updatedCharacters = runFilters.Characters.includes(character)
-            ? runFilters.Characters.filter(char => char !== character)
-            : [...runFilters.Characters, character];
+        const updatedCharacters = runFilters.includes(character)
+            ? runFilters.filter(char => char !== character)
+            : [...runFilters, character];
         setRunFilters(prevFilters => ({ ...prevFilters, Characters: updatedCharacters}));
     }
 
     useEffect(() => {
         const filteredRuns = importedRuns.filter((run) => {
-            const characterMatch = runFilters.Characters.includes(run.character_chosen);
-            const victoryMatch = runFilters.Victory === null || runFilters.Victory === run.victory;
-            return characterMatch && victoryMatch;
+            const characterMatch = runFilters.includes(run.character_chosen);
+            return characterMatch;
         });
         setRunsContext(filteredRuns);
     }, [runFilters, importedRuns, setRunsContext]);
@@ -48,7 +35,7 @@ export default function CharacterDropdown({
                                 type="checkbox"
                                 onChange={() => toggleCharacterCheckbox(character)}
                                 value={character}
-                                checked={runFilters.Characters.includes(character)}
+                                checked={runFilters.includes(character)}
                             />
                             {Constants.Renamed_Chars[character]}
                         </label>

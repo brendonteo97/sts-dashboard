@@ -2,7 +2,6 @@
 
 import RecentRuns from '@/app/ui/panels/recent-runs';
 import WinrateGraph from '@/app/ui/panels/win-rate';
-import RunFilters from '@/app/ui/panels/run-filters'
 import FloorChart from '@/app/ui/panels/floor-chart';
 
 export default function Page() {

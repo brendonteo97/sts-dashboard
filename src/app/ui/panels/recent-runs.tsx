@@ -5,9 +5,11 @@ import CharacterImage from "@/app/ui/character-image";
 import { playtimeToTimeString, timestampToTimeString, renameCharacterChosen } from "@/app/lib/data";
 import { Run } from "@/app/lib/definitions";
 import Link from "next/link";
-import CharacterDropdown from "@/app/ui/panels/character-dropdown";
+import CharacterDropdown from "@/app/ui/panels/dropdowns/character-dropdown";
 import * as Constants from '@/app/lib/constants';
-import TimestampDropdown from "./timestamp-dropdown";
+import TimestampDropdown from "./dropdowns/timestamp-dropdown";
+import Image from 'next/image';
+import VictoryDropdown from "./dropdowns/victory-dropdown";
 
 export default function RecentRuns() {
     const { importedRuns, setImportedRuns, runsContext, setRunsContext } = useContext(AppContext);
@@ -45,13 +47,31 @@ export default function RecentRuns() {
             <table className={`hidden min-w-full rounded-md text-gray-900 md:table ${kreon.className}`}>
                 <thead className="rounded-md bg-gray-50 text-left text-xl font-normal sticky top-0"> 
                     <tr>
-                        <th scope="col" className="px-4 py-5 font-medium sm:pl-6" onClick={() => handleSetShowDropdownType(Constants.Character_Chosen)}>
-                            Character
-                        <CharacterDropdown show={showDropdownType}/>
+                        <th scope="col" className="px-4 py-5 font-medium sm:pl-6">
+                            <div className='flex flex-row'>
+                                Character
+                                <Image
+                                    src='dropdown-svgrepo-com.svg'
+                                    alt='Dropdown'
+                                    width={25}
+                                    height={25}
+                                    onClick={() => handleSetShowDropdownType(Constants.Character_Chosen)}
+                                />
+                            </div>
+                            <CharacterDropdown show={showDropdownType}/>
                         </th>
-                        <th scope="col" className="px-3 py-5 font-medium" onClick={() => handleSetShowDropdownType(Constants.Timestamp)}>
-                            Timestamp
-                        <TimestampDropdown show={showDropdownType}/>
+                        <th scope="col" className="px-3 py-5 font-medium">
+                            <div className="flex flex-row">
+                                Timestamp
+                                <Image
+                                    src='dropdown-svgrepo-com.svg'
+                                    alt='Dropdown'
+                                    width={25}
+                                    height={25}
+                                    onClick={() => handleSetShowDropdownType(Constants.Timestamp)}
+                                />
+                            </div>
+                            <TimestampDropdown show={showDropdownType}/>
                         </th>
                         <th scope="col" className="px-3 py-5 font-medium" onClick={() => handleSort('playtime')}>
                             Time Taken
@@ -62,8 +82,18 @@ export default function RecentRuns() {
                         <th scope="col" className="px-3 py-5 font-medium" onClick={() => handleSort('floor_reached')}>
                             Floor Reached
                         </th>
-                        <th scope="col" className="px-3 py-5 font-medium" onClick={() => handleSort('victory')}>
-                            Victory?
+                        <th scope="col" className="px-3 py-5 font-medium">
+                            <div className="flex flex-row">
+                                Victory?
+                                <Image
+                                    src='dropdown-svgrepo-com.svg'
+                                    alt='Dropdown'
+                                    width={25}
+                                    height={25}
+                                    onClick={() => handleSetShowDropdownType(Constants.Victory)}
+                                />
+                            </div>
+                            <VictoryDropdown show={showDropdownType}/>
                         </th>
                         <th scope="col" className="px-3 py-5 font-medium" onClick={() => handleSort('play_id')}>
                             Play ID

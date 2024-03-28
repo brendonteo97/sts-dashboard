@@ -1,5 +1,6 @@
 import { FileWithPath } from "react-dropzone";
 import { Run } from "./definitions";
+import * as Constants from '@/app/lib/constants';
 
 const readFile = (file: File): Promise<string> => {
     return new Promise((resolve) => {
@@ -75,4 +76,18 @@ export function renameCharacterChosen(character: string) {
             return 'Watcher';
         }
     }
+}
+
+export function sortRuns (
+    key: keyof Run,
+    ascending: boolean,
+    importedRuns: Run[]
+) {
+    const sortedRuns = [...importedRuns].sort((a, b) => {
+        if (a[key] < b[key]) return ascending ? -1 : 1;
+        if (a[key] > b[key]) return ascending ? 1 : -1;
+        return 0;
+    });
+
+    return sortedRuns;
 }

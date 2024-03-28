@@ -81,3 +81,7 @@ export const Skip = "SKIP"
 export const Character_Chosen = 'character_chosen'
 export const Timestamp = 'timestamp'
 export const Playtime = 'playtime'
+
+export const Ascending = 'Ascending'
+export const Descending = 'Descending'
+export const Victory = 'Victory'
