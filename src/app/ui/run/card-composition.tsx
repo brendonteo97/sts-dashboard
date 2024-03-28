@@ -30,8 +30,10 @@ export default function CardComposition({
         let cardLibrary = [...cardDefaults[character]];
 
         run.card_choices.forEach((value, index, array) => {
-            if (value.floor <= currentFloor + 1) {
-                cardLibrary.push(value.picked.toLowerCase().replaceAll(' ', '_'));
+            if (value.picked !== Constants.Skip) {
+                if (value.floor <= currentFloor + 1) {
+                    cardLibrary.push(value.picked.toLowerCase().replaceAll(' ', '_'));
+                }
             }
         })
 

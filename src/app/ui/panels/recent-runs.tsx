@@ -5,10 +5,14 @@ import CharacterImage from "@/app/ui/character-image";
 import { playtimeToTimeString, timestampToTimeString, renameCharacterChosen } from "@/app/lib/data";
 import { Run } from "@/app/lib/definitions";
 import Link from "next/link";
+import CharacterDropdown from "@/app/ui/panels/character-dropdown";
+import * as Constants from '@/app/lib/constants';
+import TimestampDropdown from "./timestamp-dropdown";
 
 export default function RecentRuns() {
     const { importedRuns, setImportedRuns, runsContext, setRunsContext } = useContext(AppContext);
     const [sortConfig, setSortConfig] = useState<{ key: keyof Run; direction: 'asc' | 'desc' } | null>(null);
+    const [showDropdownType, setShowDropdownType] = useState('');
 
     const handleSort = (key: keyof Run) => {
         let direction: 'asc' | 'desc' = 'asc';
@@ -28,16 +32,26 @@ export default function RecentRuns() {
         setSortConfig({ key, direction });
     }
 
+    const handleSetShowDropdownType = (type: string) => {
+        if (type === showDropdownType) {
+            setShowDropdownType('');
+        } else {
+            setShowDropdownType(type);
+        }
+    }
+
     return (
-        <div className="flex-none w-[48rem] max-h-full flex-col justify-between rounded-xl bg-gray-50 px-4 pb-4 overflow-y-auto md:col-span-4">
+        <div className="flex-none w-[84rem] h-full flex-col justify-between rounded-xl bg-gray-50 px-4 pb-4 overflow-y-auto md:col-span-4">
             <table className={`hidden min-w-full rounded-md text-gray-900 md:table ${kreon.className}`}>
                 <thead className="rounded-md bg-gray-50 text-left text-xl font-normal sticky top-0"> 
                     <tr>
-                        <th scope="col" className="px-4 py-5 font-medium sm:pl-6" onClick={() => handleSort('character_chosen')}>
+                        <th scope="col" className="px-4 py-5 font-medium sm:pl-6" onClick={() => handleSetShowDropdownType(Constants.Character_Chosen)}>
                             Character
+                        <CharacterDropdown show={showDropdownType}/>
                         </th>
-                        <th scope="col" className="px-3 py-5 font-medium" onClick={() => handleSort('timestamp')}>
+                        <th scope="col" className="px-3 py-5 font-medium" onClick={() => handleSetShowDropdownType(Constants.Timestamp)}>
                             Timestamp
+                        <TimestampDropdown show={showDropdownType}/>
                         </th>
                         <th scope="col" className="px-3 py-5 font-medium" onClick={() => handleSort('playtime')}>
                             Time Taken
@@ -45,8 +59,14 @@ export default function RecentRuns() {
                         <th scope="col" className="px-3 py-5 font-medium" onClick={() => handleSort('ascension_level')}>
                             Ascension
                         </th>
+                        <th scope="col" className="px-3 py-5 font-medium" onClick={() => handleSort('floor_reached')}>
+                            Floor Reached
+                        </th>
                         <th scope="col" className="px-3 py-5 font-medium" onClick={() => handleSort('victory')}>
                             Victory?
+                        </th>
+                        <th scope="col" className="px-3 py-5 font-medium" onClick={() => handleSort('play_id')}>
+                            Play ID
                         </th>
                     </tr>
                 </thead>
@@ -73,8 +93,14 @@ export default function RecentRuns() {
                                 <td className="whitespace-nowrap bg-white px-4 py-5 text-lg">
                                     {run.ascension_level}
                                 </td>
-                                <td className="whitespace-nowrap bg-white px-4 py-5 text-lg group-first-of-type:rounded-md group-last-of-type:rounded-md">
+                                <td className="whitespace-nowrap bg-white px-4 py-5 text-lg">
+                                    {run.floor_reached}
+                                </td>
+                                <td className="whitespace-nowrap bg-white px-4 py-5 text-lg">
                                     {`${run.victory}`}
+                                </td>
+                                <td className="whitespace-nowrap bg-white px-4 py-5 text-lg">
+                                    {run.play_id}
                                 </td>
                             </tr>
                     ))}

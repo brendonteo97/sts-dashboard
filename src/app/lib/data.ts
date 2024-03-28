@@ -15,13 +15,18 @@ const readFile = (file: File): Promise<string> => {
 };
 
 export async function handleDrop(acceptedFiles: FileWithPath[]) {
-    const runs: Run[] = await Promise.all(
-            acceptedFiles.map(async (file) => {
+    const runs: Run[] = (await Promise.all(
+            acceptedFiles.flatMap(async (file) => {
                 const content: string = await readFile(file);
                 const run: Run = JSON.parse(content) as Run;
-                return run;
+
+                if (run.floor_reached !== 0) {
+                    return [run];
+                } else {
+                    return [];
+                }
             })
-        );
+        )).flat();
 
     return runs;
 }

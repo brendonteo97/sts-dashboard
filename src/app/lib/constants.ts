@@ -52,14 +52,14 @@ export const Renamed_Floors: {[key: string]: string} = {
 }
 
 // Chartjs constants
-export const BarChartColors = [
+export const BarChart_Colors = [
     "red",
     "green",
     "blue",
     "purple"
 ]
 
-export const FloorChartColors = [
+export const FloorChart_Colors = [
     "#fff153",
     "#dfdfdf",
     "#66ecff",
@@ -70,8 +70,14 @@ export const FloorChartColors = [
     "#886495",
 ]
 
-export const links = [
+export const Links = [
     { name: 'Dashboard', href: '/', },
-    { name: 'Card Library', href: '/library', },
-    { name: 'Runs', href: '/run', },
+    { name: 'Card Library', href: '/library/card', },
+    { name: 'Relic Library', href: '/library/relic', },
 ]
+
+export const Skip = "SKIP"
+
+export const Character_Chosen = 'character_chosen'
+export const Timestamp = 'timestamp'
+export const Playtime = 'playtime'

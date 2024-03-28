@@ -10,7 +10,7 @@ export default function NavLinks() {
     const pathname = usePathname();
     return (
         <>
-            {Constants.links.map((link) => {
+            {Constants.Links.map((link) => {
                 return (
                     <Link
                         key={link.name}

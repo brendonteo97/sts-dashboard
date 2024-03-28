@@ -41,7 +41,7 @@ export default function WinrateGraph() {
         datasets: [{
             label: "Win Rate by Character",
             data: winrates,
-            backgroundColor: Constants.BarChartColors,
+            backgroundColor: Constants.BarChart_Colors,
         }]
     };
 

@@ -12,9 +12,6 @@ export default function Page() {
                 <div>
                     <RecentRuns />
                 </div>
-                <div className="flex flex-col space-y-6 w-auto">
-                    <RunFilters />
-                </div>
                 <div className="flex flex-col space-y-6">  
                     <WinrateGraph />
                     <FloorChart />

@@ -9,6 +9,7 @@ import { useParams } from 'next/navigation';
 import { Run } from '@/app/lib/definitions';
 import RunChart from '@/app/ui/run/run-chart';
 import CardComposition from '@/app/ui/run/card-composition';
+import CardList from '@/app/ui/run/card-list';
 
 export default function Page() {
     const {runsContext} = useContext(AppContext);
@@ -27,9 +28,9 @@ export default function Page() {
                 <p className={`'text-[#efc851] text-xl ${kreon.className}`}>{Constants.Renamed_Chars[run.character_chosen]}, {timestampToTimeString(run.timestamp)}</p>
                 <RunChart run={run} onClick={changeCurrentFloor}/>
             </div>
-            <div className="flex flex-row">
+            <div className="flex flex-row gap-4">
                 <div className="flex w-1/2">
-
+                    <CardList run={run} currentFloor={currentFloorIndex}/>
                 </div>
                 <div className="flex w-1/2">
                     <CardComposition run={run} currentFloor={currentFloorIndex}/>

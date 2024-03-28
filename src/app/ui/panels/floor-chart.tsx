@@ -33,7 +33,7 @@ export default function FloorChart() {
         datasets: [{
             label: "Floor composition",
             data: counts,
-            backgroundColor: Constants.FloorChartColors,
+            backgroundColor: Constants.FloorChart_Colors,
         }]
     }
 
